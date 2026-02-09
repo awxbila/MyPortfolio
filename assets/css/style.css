@@ -1,3 +1,62 @@
+.cv-btn-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+.card-se {
+  background: transparent;
+  border: none;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto 30px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  display: block;
+}
+/* Grid 2x2 untuk gambar di dalam card-se (experience SE) */
+.card-img-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 1rem;
+}
+.card-img-grid img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #222;
+}
+/* Portfolio Toggle Buttons */
+.portfolio-toggle {
+  display: flex;
+  gap: 1rem;
+  margin: 1.5rem 0 1rem 0;
+}
+.portfolio-btn {
+  flex: 1 1 0;
+  padding: 0.7rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  background: #232323;
+  color: #fff;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+.portfolio-btn.active {
+  background: #2563eb;
+  color: #fff;
+}
+.portfolio-btn:not(.active) {
+  background: #232323;
+  color: #bdbdbd;
+}
 :root {
   --main-color: #ffffff;
   --body-color: #1f1f1f;
@@ -52,8 +111,11 @@ body {
   font-weight: 400;
   font-style: normal;
   color: var(--main-color);
-  text-shadow: -1px -1px 0 rgb(102, 102, 184), 1px -1px 0 rgb(102, 102, 184),
-    -1px 1px 0 rgb(102, 102, 184), 1px 1px 0 rgb(102, 102, 184);
+  text-shadow:
+    -1px -1px 0 rgb(102, 102, 184),
+    1px -1px 0 rgb(102, 102, 184),
+    -1px 1px 0 rgb(102, 102, 184),
+    1px 1px 0 rgb(102, 102, 184);
 }
 .nav-wrapper .menu-wrapper .menu {
   display: flex;
@@ -127,7 +189,10 @@ body {
   overflow: hidden;
   max-height: 0;
   opacity: 0;
-  transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.3s ease;
+  transition:
+    max-height 0.4s ease,
+    opacity 0.4s ease,
+    padding 0.3s ease;
   z-index: 999;
 }
 /* Active Dropdown */
@@ -207,7 +272,9 @@ body {
   font-size: 25px;
   font-weight: 400;
   box-shadow: 0 4px 10px rgba(0, 114, 255, 0.4);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 .btn:hover {
   transform: translateY(-3px);
@@ -328,6 +395,14 @@ svg text {
   stroke-width: 12;
 }
 .circle-progress {
+  fill: none;
+  stroke-width: 12;
+  stroke-linecap: round;
+  stroke-dasharray: 476.6;
+  stroke-dashoffset: calc(476.6 - (476.6 * var(--percent)) / 100);
+  transition: stroke-dashoffset 1s ease;
+}
+.circle-progress-bd {
   fill: none;
   stroke: url(#grad);
   stroke-width: 12;
@@ -557,7 +632,28 @@ svg text {
   color: var(--main-color);
   font-family: var(--main-font);
 }
+.card-se h4 {
+  margin: 0 12px;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--main-color);
+  font-family: var(--main-font);
+}
+.card-se h5 {
+  font-size: 16px;
+  font-weight: 300;
+  margin: 0 12px;
+  color: rgb(162, 162, 167);
+  font-family: var(--main-font);
+}
 .card p {
+  font-size: 16px;
+  font-weight: 300;
+  margin: 0 12px;
+  color: rgb(162, 162, 167);
+  font-family: var(--main-font);
+}
+.card-se p {
   font-size: 16px;
   font-weight: 300;
   margin: 0 12px;
@@ -602,7 +698,9 @@ svg text {
   font-size: 25px;
   font-weight: 400;
   box-shadow: 0 4px 10px rgba(0, 114, 255, 0.4);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 .btn-cv:hover {
   transform: translateY(-3px);
@@ -727,7 +825,10 @@ footer p {
     overflow: hidden;
     max-height: 0;
     opacity: 0;
-    transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.3s ease;
+    transition:
+      max-height 0.4s ease,
+      opacity 0.4s ease,
+      padding 0.3s ease;
   }
 
   .mobile-menu.active {
@@ -908,14 +1009,42 @@ footer p {
     fill: rgb(255, 255, 255);
   }
   svg {
-    width: 96px;
-    height: 96px;
+    width: 80px;
+    height: 80px;
+  }
+
+  .circle-bg,
+  .circle-progress,
+  .circle-progress-bd {
+    stroke-width: 8;
+    r: 36;
+    cx: 40;
+    cy: 40;
+  }
+
+  .circle-progress {
+    stroke-dasharray: 226.2;
+    stroke-dashoffset: calc(226.2 - (226.2 * var(--percent)) / 100);
+  }
+
+  .circle-progress-bd {
+    stroke-dasharray: 226.2;
+    stroke-dashoffset: calc(226.2 - (226.2 * var(--percent)) / 100);
+    stroke: url(#grad);
+  }
+
+  .value {
+    font-size: 14px !important;
+    fill: #fff !important;
+    display: inline !important;
+    opacity: 1 !important;
+    visibility: visible !important;
   }
 
   svg text {
     transform: rotate(90deg);
-    transform-origin: 48px 48px;
-    font-size: 18px;
+    transform-origin: 40px 40px;
+    font-size: 14px;
   }
   /* PERFORMA SECTION */
   .performa {
@@ -1037,6 +1166,12 @@ footer p {
     width: 100%;
     max-width: 100%;
     margin: 0 auto;
+  }
+
+  .card-se {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 20px auto;
   }
 
   .card h4 {

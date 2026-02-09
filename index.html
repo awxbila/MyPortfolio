@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -29,7 +29,6 @@
       <nav class="navbar">
         <div class="container nav-wrapper">
           <a class="logo">Nabilah</a>
-
           <div class="menu-wrapper">
             <ul class="menu">
               <li><a href="#profile" class="menu-link-active">Home</a></li>
@@ -61,20 +60,18 @@
               <p>W E L C O M E</p>
               <h2>I’m, Nabilah</h2>
               <h2>Nur Hazimah</h2>
-              <p>Business Development</p>
-              <div class="btn-container">
-                <a
-                  href="cvku.pdf"
-                  class="btn"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Download CV</a
-                >
+              <div class="portfolio-toggle">
+                <button id="btn-bd" class="portfolio-btn active">
+                  Business Development
+                </button>
+                <button id="btn-se" class="portfolio-btn">
+                  Software Engineer
+                </button>
               </div>
             </div>
             <div class="profile-img">
               <img
-                src="assets/img/aku.jpg"
+                src="assets/img/aku.jpeg"
                 alt="Profile Photo Nabilah Nur Hazimah"
               />
             </div>
@@ -84,32 +81,58 @@
 
       <section id="about" class="about">
         <div class="container">
-          <div class="about-content">
-            <div class="about-img">
-              <img src="assets/img/me.jpg" alt="Photo of Nabilah" />
+          <div id="about-content-wrapper">
+            <div id="about-bd" class="about-content portfolio-section">
+              <div class="about-img">
+                <img src="assets/img/me.jpeg" alt="Photo of Nabilah" />
+              </div>
+              <div class="about-text">
+                <h2 class="about-title">About Me</h2>
+                <p>
+                  I am a graduate of the Bachelor’s program in Mechanical and
+                  Biosystems Engineering who was actively involved in
+                  organizational and entrepreneurial activities during my
+                  studies. Currently, I am developing my competencies in
+                  Business Development through intensive training at MySkill and
+                  internship simulations at Forage. These programs help me learn
+                  market development strategies, sales planning, and client
+                  relationship management. In the future, I aspire to pursue a
+                  career as an Account Manager or Business Development
+                  Specialist. I believe my organizational experience,
+                  independent business management, and professional training
+                  will serve as strong assets to contribute meaningfully in the
+                  workplace.
+                </p>
+              </div>
             </div>
-            <div class="about-text">
-              <h2 class="about-title">About Me</h2>
-              <p>
-                I am a graduate of the Bachelor’s program in Mechanical and
-                Biosystems Engineering who was actively involved in
-                organizational and entrepreneurial activities during my studies.
-                Currently, I am developing my competencies in Business
-                Development through intensive training at MySkill and internship
-                simulations at Forage. These programs help me learn market
-                development strategies, sales planning, and client relationship
-                management. In the future, I aspire to pursue a career as an
-                Account Manager or Business Development Specialist. I believe my
-                organizational experience, independent business management, and
-                professional training will serve as strong assets to contribute
-                meaningfully in the workplace. Additionally, I have a keen
-                interest in Software Engineering. My thesis focused on
-                developing a web application for detecting strawberry leaf
-                diseases using machine learning. I have further pursued this
-                interest by completing the Fundamental Software Engineering
-                course at RevoU, equipping me with technical skills that
-                complement my expertise in business and technology.
-              </p>
+            <div
+              id="about-se"
+              class="about-content portfolio-section"
+              style="display: none"
+            >
+              <div class="about-img">
+                <img src="assets/img/me.jpeg" alt="Photo of Nabilah" />
+              </div>
+              <div class="about-text">
+                <h2 class="about-title">About Me</h2>
+                <p>
+                  I am a graduate of the Bachelor’s program in Mechanical and
+                  Biosystems Engineering aspiring Software Engineer who values
+                  accountability, adaptability, and problem-solving. With
+                  experience in software engineering, I contributed to
+                  developing and optimizing software solutions by analyzing
+                  system requirements and resolving technical issues to improve
+                  application stability and performance. I have skills in
+                  application development using HTML, CSS, JavaScript, PHP, and
+                  SQL, and I am able to translate system requirements and
+                  technical issues into effective software solutions. I recently
+                  completed a software engineering bootcamp at RevoU to
+                  strengthen my frontend and backend development skills. I am
+                  eager to bring my analytical mindset, technical skills, and
+                  commitment to continuous learning to a Software Engineer role
+                  and contribute meaningful impact to the team.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -117,101 +140,217 @@
 
       <section id="skills" class="skills">
         <div class="container">
-          <h2 class="skills-title">My Skills</h2>
-          <div class="skills-grid">
-            <!-- Skill 1 -->
-            <div class="skill">
-              <svg width="220" height="220">
-                <defs>
-                  <linearGradient id="grad" x1="1" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stop-color="#00e0ff" />
-                    <stop offset="100%" stop-color="#7f00ff" />
-                  </linearGradient>
-                </defs>
-                <circle class="circle-bg" cx="130" cy="130" r="75.9" />
-                <circle
-                  class="circle-progress"
-                  cx="130"
-                  cy="130"
-                  r="75.9"
-                  style="--percent: 90"
-                />
-                <text x="130" y="137" text-anchor="middle" class="value">
-                  4.5
-                </text>
-              </svg>
-              <div class="label">Communication</div>
+          <div id="skills-content-wrapper">
+            <div id="skills-bd" class="portfolio-section">
+              <h2 class="skills-title">My Skills</h2>
+              <div class="skills-grid">
+                <div class="skill">
+                  <svg width="220" height="220">
+                    <defs>
+                      <linearGradient id="grad" x1="1" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="#00e0ff" />
+                        <stop offset="100%" stop-color="#7f00ff" />
+                      </linearGradient>
+                    </defs>
+                    <circle class="circle-bg" cx="130" cy="130" r="75.9" />
+                    <circle
+                      class="circle-progress-bd"
+                      cx="130"
+                      cy="130"
+                      r="75.9"
+                      style="--percent: 90"
+                    />
+                    <text x="130" y="137" text-anchor="middle" class="value">
+                      4.5
+                    </text>
+                  </svg>
+                  <div class="label">Communication</div>
+                </div>
+                <div class="skill">
+                  <svg width="220" height="220">
+                    <circle class="circle-bg" cx="130" cy="130" r="75.9" />
+                    <circle
+                      class="circle-progress-bd"
+                      cx="130"
+                      cy="130"
+                      r="75.9"
+                      style="--percent: 80"
+                    />
+                    <text x="130" y="137" text-anchor="middle" class="value">
+                      4.0
+                    </text>
+                  </svg>
+                  <div class="label">Relationship Building</div>
+                </div>
+                <div class="skill">
+                  <svg width="220" height="220">
+                    <circle class="circle-bg" cx="130" cy="130" r="75.9" />
+                    <circle
+                      class="circle-progress-bd"
+                      cx="130"
+                      cy="130"
+                      r="75.9"
+                      style="--percent: 84"
+                    />
+                    <text x="130" y="137" text-anchor="middle" class="value">
+                      4.2
+                    </text>
+                  </svg>
+                  <div class="label">Problem Solving</div>
+                </div>
+                <div class="skill">
+                  <svg width="220" height="220">
+                    <circle class="circle-bg" cx="130" cy="130" r="75.9" />
+                    <circle
+                      class="circle-progress-bd"
+                      cx="130"
+                      cy="130"
+                      r="75.9"
+                      style="--percent: 80"
+                    />
+                    <text x="130" y="137" text-anchor="middle" class="value">
+                      4.0
+                    </text>
+                  </svg>
+                  <div class="label">Market & Industry Insight</div>
+                </div>
+                <div class="skill">
+                  <svg width="220" height="220">
+                    <circle class="circle-bg" cx="130" cy="130" r="75.9" />
+                    <circle
+                      class="circle-progress-bd"
+                      cx="130"
+                      cy="130"
+                      r="75.9"
+                      style="--percent: 90"
+                    />
+                    <text x="130" y="137" text-anchor="middle" class="value">
+                      4.5
+                    </text>
+                  </svg>
+                  <div class="label">Collaboration & Internal Coordination</div>
+                </div>
+              </div>
             </div>
-            <!-- Skill 2 -->
-            <div class="skill">
-              <svg width="220" height="220">
-                <circle class="circle-bg" cx="130" cy="130" r="75.9" />
-                <circle
-                  class="circle-progress"
-                  cx="130"
-                  cy="130"
-                  r="75.9"
-                  style="--percent: 80"
-                />
-                <text x="130" y="137" text-anchor="middle" class="value">
-                  4.0
-                </text>
-              </svg>
-              <div class="label">Relationship Building</div>
-            </div>
-
-            <!-- Skill 3 -->
-            <div class="skill">
-              <svg width="220" height="220">
-                <circle class="circle-bg" cx="130" cy="130" r="75.9" />
-                <circle
-                  class="circle-progress"
-                  cx="130"
-                  cy="130"
-                  r="75.9"
-                  style="--percent: 84"
-                />
-                <text x="130" y="137" text-anchor="middle" class="value">
-                  4.2
-                </text>
-              </svg>
-              <div class="label">Problem Solving</div>
-            </div>
-
-            <!-- Skill 4 -->
-            <div class="skill">
-              <svg width="220" height="220">
-                <circle class="circle-bg" cx="130" cy="130" r="75.9" />
-                <circle
-                  class="circle-progress"
-                  cx="130"
-                  cy="130"
-                  r="75.9"
-                  style="--percent: 80"
-                />
-                <text x="130" y="137" text-anchor="middle" class="value">
-                  4.0
-                </text>
-              </svg>
-              <div class="label">Market & Industry Insight</div>
-            </div>
-
-            <!-- Skill 5 -->
-            <div class="skill">
-              <svg width="220" height="220">
-                <circle class="circle-bg" cx="130" cy="130" r="75.9" />
-                <circle
-                  class="circle-progress"
-                  cx="130"
-                  cy="130"
-                  r="75.9"
-                  style="--percent: 90"
-                />
-                <text x="130" y="137" text-anchor="middle" class="value">
-                  4.5
-                </text>
-              </svg>
-              <div class="label">Collaboration & Internal Coordination</div>
+            <div id="skills-se" class="portfolio-section">
+              <h2 class="skills-title">My Skills</h2>
+              <div class="skills-grid">
+                <div class="skill">
+                  <svg width="220" height="220">
+                    <defs>
+                      <linearGradient id="grad-se1" x1="1" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="#00e0ff" />
+                        <stop offset="100%" stop-color="#7f00ff" />
+                      </linearGradient>
+                    </defs>
+                    <circle class="circle-bg" cx="130" cy="130" r="75.9" />
+                    <circle
+                      class="circle-progress"
+                      cx="130"
+                      cy="130"
+                      r="75.9"
+                      style="--percent: 84"
+                      stroke="url(#grad-se1)"
+                    />
+                    <text x="130" y="137" text-anchor="middle" class="value">
+                      4.2
+                    </text>
+                  </svg>
+                  <div class="label">Problem Solving</div>
+                </div>
+                <div class="skill">
+                  <svg width="220" height="220">
+                    <defs>
+                      <linearGradient id="grad-se2" x1="1" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="#00e0ff" />
+                        <stop offset="100%" stop-color="#7f00ff" />
+                      </linearGradient>
+                    </defs>
+                    <circle class="circle-bg" cx="130" cy="130" r="75.9" />
+                    <circle
+                      class="circle-progress"
+                      cx="130"
+                      cy="130"
+                      r="75.9"
+                      style="--percent: 80"
+                      stroke="url(#grad-se2)"
+                    />
+                    <text x="130" y="137" text-anchor="middle" class="value">
+                      4.0
+                    </text>
+                  </svg>
+                  <div class="label">Adaptability</div>
+                </div>
+                <div class="skill">
+                  <svg width="220" height="220">
+                    <defs>
+                      <linearGradient id="grad-se3" x1="1" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="#00e0ff" />
+                        <stop offset="100%" stop-color="#7f00ff" />
+                      </linearGradient>
+                    </defs>
+                    <circle class="circle-bg" cx="130" cy="130" r="75.9" />
+                    <circle
+                      class="circle-progress"
+                      cx="130"
+                      cy="130"
+                      r="75.9"
+                      style="--percent: 78"
+                      stroke="url(#grad-se3)"
+                    />
+                    <text x="130" y="137" text-anchor="middle" class="value">
+                      3.9
+                    </text>
+                  </svg>
+                  <div class="label">Web Development</div>
+                </div>
+                <div class="skill">
+                  <svg width="220" height="220">
+                    <defs>
+                      <linearGradient id="grad-se4" x1="1" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="#00e0ff" />
+                        <stop offset="100%" stop-color="#7f00ff" />
+                      </linearGradient>
+                    </defs>
+                    <circle class="circle-bg" cx="130" cy="130" r="75.9" />
+                    <circle
+                      class="circle-progress"
+                      cx="130"
+                      cy="130"
+                      r="75.9"
+                      style="--percent: 75"
+                      stroke="url(#grad-se4)"
+                    />
+                    <text x="130" y="137" text-anchor="middle" class="value">
+                      3.8
+                    </text>
+                  </svg>
+                  <div class="label">API Integration</div>
+                </div>
+                <div class="skill">
+                  <svg width="220" height="220">
+                    <defs>
+                      <linearGradient id="grad-se5" x1="1" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="#00e0ff" />
+                        <stop offset="100%" stop-color="#7f00ff" />
+                      </linearGradient>
+                    </defs>
+                    <circle class="circle-bg" cx="130" cy="130" r="75.9" />
+                    <circle
+                      class="circle-progress"
+                      cx="130"
+                      cy="130"
+                      r="75.9"
+                      style="--percent: 80"
+                      stroke="url(#grad-se5)"
+                    />
+                    <text x="130" y="137" text-anchor="middle" class="value">
+                      4.0
+                    </text>
+                  </svg>
+                  <div class="label">Team Collaboration</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -273,60 +412,155 @@
 
       <section id="experience" class="experience">
         <div class="container">
-          <div class="experience-heading">
-            <h2>My Experience</h2>
-          </div>
-          <h3>Organizational Experience</h3>
-          <div class="cards">
-            <div class="card">
-              <img src="assets/img/bemf.jpg" alt="BEM Logo" />
-              <h4>Faculty Student Executive Board (BEM)</h4>
-              <p>Staff Business and Partnership Division (2020)</p>
+          <div id="experience-content-wrapper">
+            <div id="experience-bd" class="portfolio-section">
+              <div class="experience-heading">
+                <h2>My Experience</h2>
+              </div>
+              <h3>Organizational Experience</h3>
+              <div class="cards">
+                <div class="card">
+                  <img src="assets/img/bemf.jpg" alt="BEM Logo" />
+                  <h4>Faculty Student Executive Board (BEM)</h4>
+                  <p>Staff Business and Partnership Division (2020)</p>
+                </div>
+                <div class="card">
+                  <img src="assets/img/hima.jpg" alt="HIMATETA Logo" />
+                  <h4>
+                    Mechanical and Biosystems Engineering Student Association
+                    (Himateta)
+                  </h4>
+                  <p>Staff Inventory and Entrepreneurship Division (2021)</p>
+                </div>
+              </div>
+              <h3>Volunteering</h3>
+              <div class="cards">
+                <div class="card">
+                  <img src="assets/img/mpkmb.jpg" alt="MPKMB 57" />
+                  <h4>Campus Orientation Committee (MPKMB 57)</h4>
+                  <p>Staff Design Decoration Branding (2020)</p>
+                </div>
+                <div class="card">
+                  <img src="assets/img/mmd.jpg" alt="TechnoF 57" />
+                  <h4>Faculty Orientation Committee (TechnoF 57)</h4>
+                  <p>Staff Multi Media and Decoration (2021)</p>
+                </div>
+                <div class="card">
+                  <img src="assets/img/redsbim.jpg" alt="Redsbim" />
+                  <h4>Redsbim (Webinars and Training)</h4>
+                  <p>Supervisor, Secretary (2021)</p>
+                </div>
+              </div>
+              <h3>Independent Business</h3>
+              <div class="cards">
+                <div class="card">
+                  <img
+                    src="assets/img/bilathrift.jpg"
+                    alt="Online thrift shop logo"
+                  />
+                  <h4>Online thrift shop (@bilathrift.id)</h4>
+                  <p>Owner (2020)</p>
+                </div>
+                <div class="card">
+                  <img
+                    src="assets/img/tokoyaya.jpg"
+                    alt="Digital product reseller logo"
+                  />
+                  <h4>Digital product reseller (@toko_yaya)</h4>
+                  <p>Owner (2025)</p>
+                </div>
+              </div>
             </div>
-            <div class="card">
-              <img src="assets/img/hima.jpg" alt="HIMATETA Logo" />
-              <h4>
-                Mechanical and Biosystems Engineering Student Association
-                (Himateta)
-              </h4>
-              <p>Staff Inventory and Entrepreneurship Division (2021)</p>
-            </div>
-          </div>
-          <h3>Volunteering</h3>
-          <div class="cards">
-            <div class="card">
-              <img src="assets/img/mpkmb.jpg" alt="MPKMB 57" />
-              <h4>Campus Orientation Committee (MPKMB 57)</h4>
-              <p>Staff Design Decoration Branding (2020)</p>
-            </div>
-            <div class="card">
-              <img src="assets/img/mmd.jpg" alt="TechnoF 57" />
-              <h4>Faculty Orientation Committee (TechnoF 57)</h4>
-              <p>Staff Multi Media and Decoration (2021)</p>
-            </div>
-            <div class="card">
-              <img src="assets/img/redsbim.jpg" alt="Redsbim" />
-              <h4>Redsbim (Webinars and Training)</h4>
-              <p>Supervisor, Secretary (2021)</p>
-            </div>
-          </div>
-          <h3>Independent Business</h3>
-          <div class="cards">
-            <div class="card">
-              <img
-                src="assets/img/bilathrift.jpg"
-                alt="Online thrift shop logo"
-              />
-              <h4>Online thrift shop (@bilathrift.id)</h4>
-              <p>Owner (2020)</p>
-            </div>
-            <div class="card">
-              <img
-                src="assets/img/tokoyaya.jpg"
-                alt="Digital product reseller logo"
-              />
-              <h4>Digital product reseller (@toko_yaya)</h4>
-              <p>Owner (2025)</p>
+            <div id="experience-se" class="portfolio-section">
+              <div class="experience-heading">
+                <h2>My Experience</h2>
+              </div>
+              <h3>Projects Experience</h3>
+              <div class="cards">
+                <div class="card-se">
+                  <div class="card-img-grid">
+                    <img
+                      src="assets/img/stroberi1.jpg"
+                      alt="Strawberry Leaf Disease 1"
+                    />
+                    <img
+                      src="assets/img/stroberi2.png"
+                      alt="Strawberry Leaf Disease 2"
+                    />
+                    <img
+                      src="assets/img/stroberi3.jpg"
+                      alt="Strawberry Leaf Disease 3"
+                    />
+                    <img
+                      src="assets/img/stroberi4.jpg"
+                      alt="Strawberry Leaf Disease 4"
+                    />
+                  </div>
+                  <h4>Peduli Stroberi</h4>
+                  <h5>
+                    Web application using machine learning to detect strawberry
+                    leaf diseases
+                  </h5>
+                  <p>(February 2023 -July 2024)</p>
+                </div>
+                <div class="card-se">
+                  <div class="card-img-grid">
+                    <img src="assets/img/port1.png" alt="Portfolio 1" />
+                    <img src="assets/img/port2.png" alt="Portfolio 2" />
+                    <img src="assets/img/port3.png" alt="Portfolio 3" />
+                    <img src="assets/img/port4.png" alt="Portfolio 4" />
+                  </div>
+                  <h4>Portfolio</h4>
+                  <h5>Responsive Web Pages</h5>
+                  <p>(July 2025 - August 2025)</p>
+                </div>
+                <div class="card-se">
+                  <div class="card-img-grid">
+                    <img src="assets/img/game1.png" alt="RevoFun 1" />
+                    <img src="assets/img/game2.png" alt="RevoFun 2" />
+                    <img src="assets/img/game3.png" alt="RevoFun 3" />
+                    <img src="assets/img/game4.png" alt="RevoFun 4" />
+                  </div>
+                  <h4>RevoFun</h4>
+                  <h5>Interactive Website</h5>
+                  <p>(September 2025)</p>
+                </div>
+                <div class="card-se">
+                  <div class="card-img-grid">
+                    <img src="assets/img/shop1.png" alt="RevoShop 1" />
+                    <img src="assets/img/shop2.png" alt="RevoShop 2" />
+                    <img src="assets/img/shop3.png" alt="RevoShop 3" />
+                    <img src="assets/img/shop4.png" alt="RevoShop 4" />
+                  </div>
+                  <h4>RevoShop</h4>
+                  <h5>Front-end Application</h5>
+                  <p>(October 2025 - November 2025)</p>
+                </div>
+                <div class="card-se">
+                  <div class="card-img-grid">
+                    <img src="assets/img/bank1.png" alt="RevoBank 1" />
+                    <img src="assets/img/bank2.png" alt="RevoBank 2" />
+                    <img src="assets/img/bank3.png" alt="RevoBank 3" />
+                    <img src="assets/img/bank4.png" alt="RevoBank 4" />
+                  </div>
+                  <h4>RevoBank-API</h4>
+                  <h5>Back-end Development</h5>
+                  <p>(December 2025 - January 2026)</p>
+                </div>
+                <div class="card-se">
+                  <div class="card-img-grid">
+                    <img src="assets/img/edu1.png" alt="RevoEdu 1" />
+                    <img src="assets/img/edu2.png" alt="RevoEdu 2" />
+                    <img src="assets/img/edu3.png" alt="RevoEdu 3" />
+                    <img src="assets/img/edu4.png" alt="RevoEdu 4" />
+                  </div>
+                  <h4>RevoEdu</h4>
+                  <h5>
+                    Comprehensive Real-world Applications for Coding Knowledge
+                  </h5>
+                  <p>(January 2026)</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -336,7 +570,14 @@
         <div class="container">
           <h2>Interested In My Experience?</h2>
           <p>Download My CV To Know More About Me</p>
-          <a href="cvku.pdf" class="btn-cv" download>Download CV</a>
+          <div class="cv-btn-group">
+            <a href="cv-bd.pdf" class="btn-cv" download
+              >Download CV Business Development</a
+            >
+            <a href="cv-se.pdf" class="btn-cv" download
+              >Download CV Software Engineer</a
+            >
+          </div>
         </div>
       </section>
 
