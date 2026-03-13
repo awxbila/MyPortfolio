@@ -1,28 +1,119 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/akoVEwkh)
-Nabilah Nur Hazimah — Personal Portfolio
-Welcome to my personal portfolio website! The website is designed to showcase Nabilah's skills and experience in business and technology, as well as her interest in working in business development.
+# Nabilah Nur Hazimah - Personal Portfolio
 
-Overview
-This website was created to present my profile as a fresh graduate majoring in mechanical and biosystem engineering with a strong interest in technology, business development, and digital product development.
+<p align="center">
+	<img src="assets/img/pf.png" alt="Portfolio Preview" width="92%" />
+</p>
 
-This website consists of about me, my skills, my experience in the business field, and how to contact me. Designed as best as possible to attract the viewer visually.
+<p align="center">
+	Portofolio personal yang menampilkan profil, pengalaman, sertifikat, dan project showcase dengan pendekatan modern, interaktif, dan mobile-friendly.
+</p>
 
-Features Implemented
-Responsive navigation bar with smooth scroll to sections.
-Homepage section with a welcome message and intro.
-About Me section containing a biography.
-Skills section containing both business and language skills.
-Experience section containing organizational, committee, and independent business experience.
-A section with a button to download my CV if you're interested in my skills and experience.
-Contact Section with:
-Functional form to send direct message by email
-Semantic HTML structure for SEO optimization.
-Clean and modern UI styled with custom CSS.
-Technologies & Tools Used
-HTML – For content structure using semantic tags.
-CSS – Custom styling including layout, spacing, and responsiveness.
-JavaScript – Smooth scrolling and basic DOM interaction.
-GitHub – Version control and source code hosting.
-GitHub Pages – For deployment and public access.
-Getting Started
-You can access the deployed website here: http://nabilahporfo.my.id/
+<p align="center">
+	<a href="https://nabilahnurhazimah.my.id">Live Website</a>
+	|
+	<a href="https://docs.google.com/document/d/1vQmc5B1rz7LEpmpSkbZcPemeWume-slI/edit?usp=sharing&ouid=102538993394413215208&rtpof=true&sd=true">Download CV</a>
+	|
+	<a href="https://github.com/awxbila">GitHub</a>
+	|
+	<a href="https://www.linkedin.com/in/abilanr/">LinkedIn</a>
+</p>
+
+<p align="center">
+	<img src="https://img.shields.io/badge/Status-Active-0f766e?style=for-the-badge" alt="Status Active" />
+	<img src="https://img.shields.io/badge/Projects-6-blue?style=for-the-badge" alt="6 Projects" />
+	<img src="https://img.shields.io/badge/Certificates-4-2563eb?style=for-the-badge" alt="4 Certificates" />
+	<img src="https://img.shields.io/badge/Frontend-HTML%20%7C%20CSS%20%7C%20JS-ea580c?style=for-the-badge" alt="Frontend Stack" />
+</p>
+
+## Tentang Proyek
+
+Website ini dibangun untuk personal branding sebagai Full-Stack Developer, dengan latar belakang engineering dan minat kuat pada software development.
+
+Halaman utama merangkum:
+
+- Profil singkat dan personal statement
+- Riwayat studi dan performa
+- Tools, technologies, dan soft skills
+- Experience timeline dengan filter
+- Certificates gallery
+- Showcase 6 project utama
+- Tombol download CV
+- Contact section dengan form kirim pesan
+
+## Fitur Unggulan
+
+- Intro splash screen dengan animasi pembuka
+- Typewriter effect pada hero section
+- Navigasi responsif (desktop + hamburger mobile)
+- Section reveal animation berbasis Intersection Observer
+- Tabs untuk Experience, Certificates, dan Projects
+- Filter kategori pada Experience (Working, Organizational, Volunteer)
+- Halaman detail untuk setiap project di folder projects
+- Contact form terintegrasi FormSubmit
+
+## Tech Stack
+
+| Area                       | Teknologi                                                                      |
+| -------------------------- | ------------------------------------------------------------------------------ |
+| Frontend                   | HTML5, CSS3, JavaScript                                                        |
+| UI/UX                      | Custom CSS, Responsive Design, Font Awesome, Boxicons                          |
+| Deployment                 | GitHub Pages / custom domain                                                   |
+| Form Service               | FormSubmit (AJAX endpoint)                                                     |
+| Pendukung Project Showcase | Next.js, NestJS, TypeScript, PostgreSQL, Prisma, Flask, YOLOv8, OpenCV, Docker |
+
+## Project Showcase
+
+| Project           | Fokus                           | Detail                                               | Live                                      | Repository                                                                                       |
+| ----------------- | ------------------------------- | ---------------------------------------------------- | ----------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| RevoEdu           | LMS Full-Stack Web App          | [projects/lms.html](projects/lms.html)               | -                                         | [RevoEdu](https://github.com/awxbila/RevoEdu.git)                                                |
+| RevoShop          | E-Commerce Full-Stack           | [projects/ecommerce.html](projects/ecommerce.html)   | [Demo](https://revoshop-9vpz.vercel.app/) | [RevoShop](https://github.com/awxbila/revoshop.git)                                              |
+| RevoBank          | Backend Banking API             | [projects/revobank.html](projects/revobank.html)     | -                                         | [RevoBank API](https://github.com/awxbila/RevoBank-API.git)                                      |
+| RevoFun           | Browser Mini Games              | [projects/game.html](projects/game.html)             | -                                         | [RevoFun](https://github.com/awxbila/RevoFun2.git)                                               |
+| Portfolio Website | Frontend Personal Branding      | [projects/porto.html](projects/porto.html)           | [Live](https://nabilahporfo.my.id)        | [Portfolio Repo](https://github.com/awxbila/Portofolio.git)                                      |
+| Peduli Stroberi   | Computer Vision for Agriculture | [projects/strawberry.html](projects/strawberry.html) | -                                         | [Peduli Stroberi](https://github.com/awxbila/skripsi-deteksi-penyakit-daun-tanaman-stroberi.git) |
+
+## Struktur Folder
+
+```text
+.
+|- index.html
+|- README.md
+|- assets/
+|  |- css/
+|  |  |- style.css
+|  |- img/
+|  |- js/
+|     |- main.js
+|- projects/
+|  |- ecommerce.html
+|  |- game.html
+|  |- lms.html
+|  |- porto.html
+|  |- revobank.html
+|  |- strawberry.html
+```
+
+## Menjalankan Secara Lokal
+
+1. Clone repository ini.
+2. Buka folder project.
+3. Jalankan dengan Live Server agar semua fitur (terutama form dan behavior JS) berjalan optimal.
+4. Alternatif cepat: buka file index.html langsung di browser.
+
+Catatan:
+Contact form tidak bisa mengirim pesan jika file dibuka lewat protokol file lokal. Gunakan Live Server atau versi website yang sudah ter-deploy.
+
+## Kontak
+
+- Email: nablahnur54@gmail.com
+- Phone: +62 859 3043 6990
+- LinkedIn: https://www.linkedin.com/in/abilanr/
+- GitHub: https://github.com/awxbila
+- Telegram: https://t.me/awbila
+- Instagram: https://www.instagram.com/abilanr
+
+## Closing
+
+From your vision to my code.
+
+Terima kasih sudah berkunjung ke portfolio ini.
