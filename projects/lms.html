@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LMS Web Application | awxbila</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <style>
+      :root {
+        --bg: #1f1f1f;
+        --fg: #ffffff;
+        --accent: #2a69f0;
+        --accent-light: #7dd3fc;
+        --muted: rgba(209, 215, 219, 0.82);
+        --card-bg: rgba(255, 255, 255, 0.05);
+        --card-border: rgba(148, 163, 184, 0.18);
+        --font: "Poppins", sans-serif;
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        list-style: none;
+      }
+      body {
+        background: var(--bg);
+        color: var(--fg);
+        font-family: var(--font);
+        line-height: 1.6;
+      }
+      a {
+        color: inherit;
+      }
+
+      /* TOP BAR */
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        padding: 14px 2.5rem;
+        background: rgba(31, 31, 31, 0.88);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--card-border);
+      }
+      .back-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 7px 16px;
+        border-radius: 999px;
+        background: rgba(42, 105, 240, 0.14);
+        border: 1px solid rgba(42, 105, 240, 0.38);
+        color: var(--accent-light);
+        font-size: 13px;
+        font-weight: 600;
+        transition: background 0.25s;
+        cursor: pointer;
+      }
+      .back-btn:hover {
+        background: rgba(42, 105, 240, 0.26);
+      }
+      .topbar-name {
+        margin-left: auto;
+        font-size: 14px;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.55);
+        letter-spacing: 0.03em;
+      }
+
+      .project-back-row {
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 1.2rem;
+      }
+
+      /* MAIN */
+      .wrap {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 3rem 2rem 5rem;
+      }
+
+      /* HERO */
+      .proj-type {
+        font-size: 11.5px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #5a9ef0;
+        margin-bottom: 10px;
+      }
+      .proj-title {
+        font-size: clamp(26px, 5vw, 42px);
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 14px;
+        background: linear-gradient(90deg, #ffffff 20%, #7dd3fc 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .proj-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 1.8rem;
+      }
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 5px 14px;
+        border-radius: 999px;
+        font-size: 12px;
+        font-weight: 600;
+        font-family: Arial, sans-serif;
+      }
+      .badge--year {
+        background: rgba(42, 105, 240, 0.14);
+        border: 1px solid rgba(42, 105, 240, 0.35);
+        color: var(--accent-light);
+      }
+      .badge--type {
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid var(--card-border);
+        color: #e2e8f0;
+      }
+
+      /* TECH STACK */
+      .tech-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 2.4rem;
+      }
+      .tech-badge {
+        padding: 5px 13px;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.07);
+        border: 1px solid rgba(148, 163, 184, 0.2);
+        font-size: 12px;
+        font-weight: 600;
+        color: #e2e8f0;
+        font-family: Arial, sans-serif;
+      }
+
+      /* SECTION LABEL */
+      .section-label {
+        font-size: 10.5px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: rgba(148, 163, 184, 0.75);
+        margin-bottom: 14px;
+      }
+
+      /* SCREENSHOTS */
+      .screenshots-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-bottom: 2.5rem;
+        align-items: start;
+      }
+      .screenshots-grid img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        object-position: center;
+        filter: grayscale(100%);
+        transition: filter 0.35s ease;
+        border-radius: 10px;
+        display: block;
+        align-self: start;
+        border: 1px solid var(--card-border);
+      }
+      .screenshots-grid img:hover {
+        filter: grayscale(0%);
+      }
+      .screenshots-grid img:first-child {
+        grid-column: 1 / -1;
+      }
+
+      /* DESCRIPTION */
+      .desc-card {
+        background: var(--card-bg);
+        border: 1px solid var(--card-border);
+        border-radius: 16px;
+        padding: 1.8rem;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 8px 24px rgba(2, 6, 23, 0.18);
+        margin-bottom: 2rem;
+      }
+      .desc-card p {
+        font-size: 14px;
+        line-height: 1.78;
+        color: var(--muted);
+        margin-bottom: 1rem;
+      }
+      .desc-card p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* LINKS */
+      .proj-links {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      .proj-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 22px;
+        border-radius: 10px;
+        font-size: 13px;
+        font-weight: 600;
+        font-family: var(--font);
+        transition:
+          transform 0.2s,
+          background 0.25s;
+        cursor: pointer;
+        border: none;
+      }
+      .proj-btn:hover {
+        transform: translateY(-2px);
+      }
+      .proj-btn--primary {
+        background: linear-gradient(135deg, #2a69f0, #00c6ff);
+        color: #fff;
+      }
+      .proj-btn--ghost {
+        background: rgba(255, 255, 255, 0.07);
+        border: 1px solid rgba(148, 163, 184, 0.25);
+        color: #e2e8f0;
+      }
+      .proj-btn--ghost:hover {
+        background: rgba(255, 255, 255, 0.12);
+      }
+
+      /* DIVIDER */
+      .divider {
+        height: 1px;
+        background: var(--card-border);
+        margin: 2.4rem 0;
+      }
+
+      @media (max-width: 600px) {
+        .wrap {
+          padding: 2rem 1rem 4rem;
+        }
+        .topbar {
+          padding: 12px 1.2rem;
+        }
+        .proj-title {
+          font-size: 24px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="container nav-wrapper">
+          <a class="logo">nabilah nur hazimah</a>
+          <div class="menu-wrapper">
+            <ul class="menu">
+              <li>
+                <a href="../index.html#profile" class="menu-link-active"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a href="../index.html#experience" class="menu-link"
+                  >Experience</a
+                >
+              </li>
+              <li>
+                <a href="../index.html#contact" class="menu-link">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <ul class="mobile-menu" id="mobileMenu">
+            <li>
+              <a href="../index.html#profile" class="menu-link-active">Home</a>
+            </li>
+            <li>
+              <a href="../index.html#experience" class="menu-link"
+                >Experience</a
+              >
+            </li>
+            <li>
+              <a href="../index.html#contact" class="menu-link">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="wrap">
+      <div class="project-back-row">
+        <a href="../index.html#experience" class="back-btn">
+          <i class="fa-solid fa-arrow-left"></i>
+          Back
+        </a>
+      </div>
+
+      <!-- HERO -->
+      <p class="proj-type">Full-Stack Web Application</p>
+      <h1 class="proj-title">Revo Education</h1>
+      <div class="proj-meta">
+        <span class="badge badge--year">
+          <i class="fa-regular fa-calendar"></i> December 2025 - January 2026
+        </span>
+        <span class="badge badge--type">
+          <i class="fa-solid fa-graduation-cap"></i> RevoU
+        </span>
+        <span class="badge badge--type">
+          <i class="fa-solid fa-users"></i> Personal Project
+        </span>
+      </div>
+
+      <!-- TECH STACK -->
+      <p class="section-label">Tools & Tech Stack</p>
+      <div class="tech-list">
+        <span class="tech-badge">TypeScript</span>
+        <span class="tech-badge">React</span>
+        <span class="tech-badge">Node.js</span>
+        <span class="tech-badge">AWS S3</span>
+        <span class="tech-badge">PostgreSQL</span>
+        <span class="tech-badge">Prisma</span>
+        <span class="tech-badge">Tailwind CSS</span>
+        <span class="tech-badge">JWT</span>
+        <span class="tech-badge">Next.js</span>
+        <span class="tech-badge">Railway</span>
+        <span class="tech-badge">Vercel</span>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- SCREENSHOTS -->
+      <p class="section-label">Overview</p>
+      <div class="screenshots-grid">
+        <img src="../assets/img/lms.png" alt="lms overview" />
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Summary -->
+      <p class="section-label">Project Summary</p>
+      <div class="desc-card">
+        <p>
+          RevoEdu is a comprehensive Learning Management System (LMS) designed
+          to facilitate digital education for both students and lecturers. It
+          serves as a centralized platform for course management, content
+          delivery, and assignment tracking, bridging the gap between
+          instructional material and student engagement in a virtual classroom
+          environment.
+        </p>
+        <p>
+          The project aimed to build a scalable, role-based educational
+          platform. Key objectives included implementing secure authentication
+          for different user types, enabling lecturers to manage course modules
+          and assignments, and providing students with a structured dashboard to
+          track their learning progress, enroll in courses, and submit academic
+          tasks.
+        </p>
+        <p>
+          I developed the frontend using Next.js 14 and TypeScript, leveraging
+          the App Router for efficient navigation. I implemented a robust
+          role-based access control (RBAC) system with JWT for session
+          management. I integrated AWS S3 for cloud-based file storage and
+          utilized Tailwind CSS to build a responsive, user-friendly interface
+          for both dashboards.
+        </p>
+        <p>
+          The deliverable is a functional LMS prototype featuring
+          dual-perspective dashboards. It includes features for course browsing,
+          module viewing, assignment submission, and grading. The system is
+          equipped with secure file upload capabilities, automated routing based
+          on user roles, and a clean UI optimized for academic workflows.
+        </p>
+      </div>
+
+      <!-- Method -->
+      <p class="section-label">Methods</p>
+      <div class="desc-card">
+        <p>
+          <strong>Role-Based Access Control (RBAC):</strong> Implementing logic
+          to redirect users to specific dashboards based on their 'Lecturer' or
+          'Student' status.
+        </p>
+        <p>
+          <strong>Cloud File Management:</strong> Utilizing the AWS SDK to
+          handle secure file buffers and S3 bucket uploads.
+        </p>
+        <p>
+          <strong>Middleware Authorization:</strong> Using Next.js middleware to
+          intercept requests and validate user permissions before granting page
+          access.
+        </p>
+        <p>
+          <strong>Client-Side State Management:</strong> Using React hooks to
+          manage dynamic course filters and assignment submission states.
+        </p>
+      </div>
+
+      <!-- LINKS
+       <a
+          href="#"
+          class="proj-btn proj-btn--primary"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          Live Demo
+        </a>
+      -->
+      <div class="proj-links">
+        <a
+          href="https://github.com/awxbila/RevoEdu.git"
+          class="proj-btn proj-btn--ghost"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fa-brands fa-github"></i>
+          Repository
+        </a>
+      </div>
+    </main>
+    <script>
+      (function () {
+        const markSkipIntro = () => {
+          try {
+            sessionStorage.setItem("awxbila:skip-intro-once", "1");
+          } catch {
+            // ignore storage errors
+          }
+        };
+
+        document
+          .querySelectorAll('a[href^="../index.html"]')
+          .forEach((link) => link.addEventListener("click", markSkipIntro));
+      })();
+    </script>
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>

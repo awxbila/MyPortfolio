@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Commerce Platform | awxbila</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <style>
+      :root {
+        --bg: #1f1f1f;
+        --fg: #ffffff;
+        --accent: #2a69f0;
+        --accent-light: #7dd3fc;
+        --muted: rgba(209, 215, 219, 0.82);
+        --card-bg: rgba(255, 255, 255, 0.05);
+        --card-border: rgba(148, 163, 184, 0.18);
+        --font: "Poppins", sans-serif;
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        list-style: none;
+      }
+      body {
+        background: var(--bg);
+        color: var(--fg);
+        font-family: var(--font);
+        line-height: 1.6;
+      }
+      a {
+        color: inherit;
+      }
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        padding: 14px 2.5rem;
+        background: rgba(31, 31, 31, 0.88);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--card-border);
+      }
+      .back-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 7px 16px;
+        border-radius: 999px;
+        background: rgba(42, 105, 240, 0.14);
+        border: 1px solid rgba(42, 105, 240, 0.38);
+        color: var(--accent-light);
+        font-size: 13px;
+        font-weight: 600;
+        transition: background 0.25s;
+        cursor: pointer;
+      }
+      .back-btn:hover {
+        background: rgba(42, 105, 240, 0.26);
+      }
+      .topbar-name {
+        margin-left: auto;
+        font-size: 14px;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.55);
+        letter-spacing: 0.03em;
+      }
+      .project-back-row {
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 1.2rem;
+      }
+      .wrap {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 3rem 2rem 5rem;
+      }
+      .proj-type {
+        font-size: 11.5px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #5a9ef0;
+        margin-bottom: 10px;
+      }
+      .proj-title {
+        font-size: clamp(26px, 5vw, 42px);
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 14px;
+        background: linear-gradient(90deg, #ffffff 20%, #7dd3fc 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .proj-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 1.8rem;
+      }
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 5px 14px;
+        border-radius: 999px;
+        font-size: 12px;
+        font-weight: 600;
+        font-family: Arial, sans-serif;
+      }
+      .badge--year {
+        background: rgba(42, 105, 240, 0.14);
+        border: 1px solid rgba(42, 105, 240, 0.35);
+        color: var(--accent-light);
+      }
+      .badge--type {
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid var(--card-border);
+        color: #e2e8f0;
+      }
+      .tech-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 2.4rem;
+      }
+      .tech-badge {
+        padding: 5px 13px;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.07);
+        border: 1px solid rgba(148, 163, 184, 0.2);
+        font-size: 12px;
+        font-weight: 600;
+        color: #e2e8f0;
+        font-family: Arial, sans-serif;
+      }
+      .section-label {
+        font-size: 10.5px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: rgba(148, 163, 184, 0.75);
+        margin-bottom: 14px;
+      }
+      .screenshots-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-bottom: 2.5rem;
+        align-items: start;
+      }
+      .screenshots-grid img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        object-position: center;
+        filter: grayscale(100%);
+        transition: filter 0.35s ease;
+        border-radius: 10px;
+        display: block;
+        align-self: start;
+        border: 1px solid var(--card-border);
+      }
+      .screenshots-grid img:hover {
+        filter: grayscale(0%);
+      }
+      .screenshots-grid img:first-child {
+        grid-column: 1 / -1;
+      }
+      .desc-card {
+        background: var(--card-bg);
+        border: 1px solid var(--card-border);
+        border-radius: 16px;
+        padding: 1.8rem;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 8px 24px rgba(2, 6, 23, 0.18);
+        margin-bottom: 2rem;
+      }
+      .desc-card p {
+        font-size: 14px;
+        line-height: 1.78;
+        color: var(--muted);
+        margin-bottom: 1rem;
+      }
+      .desc-card p:last-child {
+        margin-bottom: 0;
+      }
+      .proj-links {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      .proj-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 22px;
+        border-radius: 10px;
+        font-size: 13px;
+        font-weight: 600;
+        font-family: var(--font);
+        transition:
+          transform 0.2s,
+          background 0.25s;
+        cursor: pointer;
+        border: none;
+      }
+      .proj-btn:hover {
+        transform: translateY(-2px);
+      }
+      .proj-btn--primary {
+        background: linear-gradient(135deg, #2a69f0, #00c6ff);
+        color: #fff;
+      }
+      .proj-btn--ghost {
+        background: rgba(255, 255, 255, 0.07);
+        border: 1px solid rgba(148, 163, 184, 0.25);
+        color: #e2e8f0;
+      }
+      .proj-btn--ghost:hover {
+        background: rgba(255, 255, 255, 0.12);
+      }
+      .divider {
+        height: 1px;
+        background: var(--card-border);
+        margin: 2.4rem 0;
+      }
+      @media (max-width: 600px) {
+        .wrap {
+          padding: 2rem 1rem 4rem;
+        }
+        .topbar {
+          padding: 12px 1.2rem;
+        }
+        .proj-title {
+          font-size: 24px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="container nav-wrapper">
+          <a class="logo">nabilah nur hazimah</a>
+          <div class="menu-wrapper">
+            <ul class="menu">
+              <li>
+                <a href="../index.html#profile" class="menu-link-active"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a href="../index.html#experience" class="menu-link"
+                  >Experience</a
+                >
+              </li>
+              <li>
+                <a href="../index.html#contact" class="menu-link">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <ul class="mobile-menu" id="mobileMenu">
+            <li>
+              <a href="../index.html#profile" class="menu-link-active">Home</a>
+            </li>
+            <li>
+              <a href="../index.html#experience" class="menu-link"
+                >Experience</a
+              >
+            </li>
+            <li>
+              <a href="../index.html#contact" class="menu-link">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="wrap">
+      <div class="project-back-row">
+        <a href="../index.html#experience" class="back-btn">
+          <i class="fa-solid fa-arrow-left"></i>
+          Back
+        </a>
+      </div>
+
+      <p class="proj-type">Full-Stack Web Application</p>
+      <h1 class="proj-title">Revo Shoping</h1>
+      <div class="proj-meta">
+        <span class="badge badge--year">
+          <i class="fa-regular fa-calendar"></i>October 2025 - November 2025
+        </span>
+        <span class="badge badge--type">
+          <i class="fa-solid fa-bag-shopping"></i> RevoU
+        </span>
+        <span class="badge badge--type">
+          <i class="fa-solid fa-code"></i> Personal Project
+        </span>
+      </div>
+
+      <p class="section-label">Tools & Tech Stack</p>
+      <div class="tech-list">
+        <span class="tech-badge">Next.js</span>
+        <span class="tech-badge">TypeScript</span>
+        <span class="tech-badge">Tailwind CSS</span>
+        <span class="tech-badge">Jest</span>
+        <span class="tech-badge">React Testing Library</span>
+        <span class="tech-badge">PostgreSQL</span>
+        <span class="tech-badge">Prisma</span>
+        <span class="tech-badge">Neonbase</span>
+        <span class="tech-badge">Vercel</span>
+      </div>
+
+      <div class="divider"></div>
+
+      <p class="section-label">Overview</p>
+      <div class="screenshots-grid">
+        <img src="../assets/img/shop.png" alt="Shop page" />
+      </div>
+
+      <div class="divider"></div>
+
+      <p class="section-label">Project Summary</p>
+      <div class="desc-card">
+        <p>
+          RevoShop is a modern e-commerce application designed to provide a
+          seamless shopping experience for digital products. Built to
+          demonstrate proficiency in contemporary web development, it serves as
+          a functional store prototype where users can browse, filter, and
+          manage products through a clean, performant interface.
+        </p>
+        <p>
+          The project aims to deliver a high-performance shopping platform
+          utilizing server-side optimization and type safety. Key objectives
+          included implementing an efficient data-fetching strategy, creating a
+          secure admin management portal, and ensuring a responsive, accessible
+          UI for varied user categories.
+        </p>
+        <p>
+          Development followed a modular architecture using the Next.js App
+          Router for optimized routing and layout management. I engineered
+          custom API routes for product data, integrated global state for
+          authentication and cart management, and implemented middleware to
+          secure checkout and administrative routes.
+        </p>
+        <p>
+          The final deliverable is a fully deployed, type-safe e-commerce web
+          application featuring product listings, category filtering, and an
+          admin dashboard. It achieves high performance through Incremental
+          Static Regeneration (ISR) and maintains reliability with a
+          comprehensive suite of unit tests for core context and UI components.
+        </p>
+      </div>
+
+      <!-- Method -->
+      <p class="section-label">Methods</p>
+      <div class="desc-card">
+        <p>
+          <strong>Incremental Static Regeneration (ISR):</strong> Strategy for
+          updating static content after build time.
+        </p>
+        <p>
+          <strong>API Route Handlers:</strong> Creating custom GET and POST
+          endpoints for product and admin management.
+        </p>
+        <p>
+          <strong>Next.js Middleware:</strong> Implementing centralized
+          authentication and authorization checks for specific paths.
+        </p>
+        <p>
+          <strong>Context API:</strong> Managing global state for user
+          authentication status and shopping cart functionality.
+        </p>
+      </div>
+
+      <div class="proj-links">
+        <a
+          href="https://revoshop-9vpz.vercel.app/"
+          class="proj-btn proj-btn--primary"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          Live Demo
+        </a>
+        <a
+          href="https://github.com/awxbila/revoshop.git"
+          class="proj-btn proj-btn--ghost"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fa-brands fa-github"></i>
+          Repository
+        </a>
+      </div>
+    </main>
+    <script>
+      (function () {
+        const markSkipIntro = () => {
+          try {
+            sessionStorage.setItem("awxbila:skip-intro-once", "1");
+          } catch {
+            // ignore storage errors
+          }
+        };
+
+        document
+          .querySelectorAll('a[href^="../index.html"]')
+          .forEach((link) => link.addEventListener("click", markSkipIntro));
+      })();
+    </script>
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>

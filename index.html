@@ -17,22 +17,40 @@
     />
 
     <link
+      href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
 
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
 
   <body>
+    <!-- intro splash overlay -->
+    <div id="intro-overlay" aria-hidden="true">
+      <div class="intro-text">
+        <span class="intro-welcome">Welcome</span>
+        <span class="intro-sub">to My Portfolio Website</span>
+      </div>
+    </div>
+
     <header>
       <nav class="navbar">
         <div class="container nav-wrapper">
-          <a class="logo">Nabilah</a>
+          <a class="logo">nabilah nur hazimah</a>
           <div class="menu-wrapper">
             <ul class="menu">
               <li><a href="#profile" class="menu-link-active">Home</a></li>
-              <li><a href="#experience" class="menu-link">Portfolio</a></li>
+              <li><a href="#experience" class="menu-link">Experience</a></li>
               <li><a href="#contact" class="menu-link">Contact</a></li>
             </ul>
           </div>
@@ -45,7 +63,7 @@
           <!-- Menu yang muncul saat hamburger diklik -->
           <ul class="mobile-menu" id="mobileMenu">
             <li><a href="#profile" class="menu-link-active">Home</a></li>
-            <li><a href="#experience" class="menu-link">Portfolio</a></li>
+            <li><a href="#experience" class="menu-link">Experience</a></li>
             <li><a href="#contact" class="menu-link">Contact</a></li>
           </ul>
         </div>
@@ -60,20 +78,17 @@
               <p>W E L C O M E</p>
               <h2>I’m, Nabilah</h2>
               <h2>Nur Hazimah</h2>
-              <div class="portfolio-toggle">
-                <button id="btn-bd" class="portfolio-btn active">
-                  Business Development
-                </button>
-                <button id="btn-se" class="portfolio-btn">
-                  Software Engineer
-                </button>
-              </div>
+              <button class="portfolio-btn active" disabled>
+                <span class="typewriter-text">Full-Stack Developer</span>
+              </button>
             </div>
             <div class="profile-img">
-              <img
-                src="assets/img/aku.jpeg"
-                alt="Profile Photo Nabilah Nur Hazimah"
-              />
+              <div class="profile-img-frame">
+                <img
+                  src="assets/img/aku2.jpeg"
+                  alt="Profile Photo Nabilah Nur Hazimah"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -87,272 +102,69 @@
                 <img src="assets/img/me.jpeg" alt="Photo of Nabilah" />
               </div>
               <div class="about-text">
-                <h2 class="about-title">About Me</h2>
+                <h2 class="about-title">Who Am I?</h2>
                 <p>
-                  I am a graduate of the Bachelor’s program in Mechanical and
-                  Biosystems Engineering who was actively involved in
-                  organizational and entrepreneurial activities during my
-                  studies. Currently, I am developing my competencies in
-                  Business Development through intensive training at MySkill and
-                  internship simulations at Forage. These programs help me learn
-                  market development strategies, sales planning, and client
-                  relationship management. In the future, I aspire to pursue a
-                  career as an Account Manager or Business Development
-                  Specialist. I believe my organizational experience,
-                  independent business management, and professional training
-                  will serve as strong assets to contribute meaningfully in the
-                  workplace.
+                  Hi! I’m <strong>Nabilah</strong>, but you can call me
+                  <strong>'Bila'</strong> or <strong>'Abil'</strong>. I’m a
+                  Bachelor of Engineering graduate with a strong interest in
+                  software development and systematic problem-solving. I have
+                  experience in business environments and web application
+                  development, which helps me understand user needs and
+                  operational processes when building digital solutions. I also
+                  completed an intensive full-stack software engineering
+                  bootcamp, gaining experience with technologies such as
+                  <strong>JavaScript, CSS, Next.js, NestJS, and SQL</strong>.
+                  I’m interested in building reliable, scalable, and
+                  maintainable systems while continuously growing my skills as a
+                  <strong>Full-Stack Developer</strong>.
                 </p>
-              </div>
-            </div>
-            <div
-              id="about-se"
-              class="about-content portfolio-section"
-              style="display: none"
-            >
-              <div class="about-img">
-                <img src="assets/img/me.jpeg" alt="Photo of Nabilah" />
-              </div>
-              <div class="about-text">
-                <h2 class="about-title">About Me</h2>
-                <p>
-                  I am a graduate of the Bachelor’s program in Mechanical and
-                  Biosystems Engineering aspiring Software Engineer who values
-                  accountability, adaptability, and problem-solving. With
-                  experience in software engineering, I contributed to
-                  developing and optimizing software solutions by analyzing
-                  system requirements and resolving technical issues to improve
-                  application stability and performance. I have skills in
-                  application development using HTML, CSS, JavaScript, PHP, and
-                  SQL, and I am able to translate system requirements and
-                  technical issues into effective software solutions. I recently
-                  completed a software engineering bootcamp at RevoU to
-                  strengthen my frontend and backend development skills. I am
-                  eager to bring my analytical mindset, technical skills, and
-                  commitment to continuous learning to a Software Engineer role
-                  and contribute meaningful impact to the team.
-                </p>
+                <h3><i>"From your vision to my code"</i></h3>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="skills" class="skills">
-        <div class="container">
-          <div id="skills-content-wrapper">
-            <div id="skills-bd" class="portfolio-section">
-              <h2 class="skills-title">My Skills</h2>
-              <div class="skills-grid">
-                <div class="skill">
-                  <svg width="220" height="220">
-                    <defs>
-                      <linearGradient id="grad" x1="1" y1="0" x2="0" y2="1">
-                        <stop offset="0%" stop-color="#00e0ff" />
-                        <stop offset="100%" stop-color="#7f00ff" />
-                      </linearGradient>
-                    </defs>
-                    <circle class="circle-bg" cx="130" cy="130" r="75.9" />
-                    <circle
-                      class="circle-progress-bd"
-                      cx="130"
-                      cy="130"
-                      r="75.9"
-                      style="--percent: 90"
-                    />
-                    <text x="130" y="137" text-anchor="middle" class="value">
-                      4.5
-                    </text>
-                  </svg>
-                  <div class="label">Communication</div>
-                </div>
-                <div class="skill">
-                  <svg width="220" height="220">
-                    <circle class="circle-bg" cx="130" cy="130" r="75.9" />
-                    <circle
-                      class="circle-progress-bd"
-                      cx="130"
-                      cy="130"
-                      r="75.9"
-                      style="--percent: 80"
-                    />
-                    <text x="130" y="137" text-anchor="middle" class="value">
-                      4.0
-                    </text>
-                  </svg>
-                  <div class="label">Relationship Building</div>
-                </div>
-                <div class="skill">
-                  <svg width="220" height="220">
-                    <circle class="circle-bg" cx="130" cy="130" r="75.9" />
-                    <circle
-                      class="circle-progress-bd"
-                      cx="130"
-                      cy="130"
-                      r="75.9"
-                      style="--percent: 84"
-                    />
-                    <text x="130" y="137" text-anchor="middle" class="value">
-                      4.2
-                    </text>
-                  </svg>
-                  <div class="label">Problem Solving</div>
-                </div>
-                <div class="skill">
-                  <svg width="220" height="220">
-                    <circle class="circle-bg" cx="130" cy="130" r="75.9" />
-                    <circle
-                      class="circle-progress-bd"
-                      cx="130"
-                      cy="130"
-                      r="75.9"
-                      style="--percent: 80"
-                    />
-                    <text x="130" y="137" text-anchor="middle" class="value">
-                      4.0
-                    </text>
-                  </svg>
-                  <div class="label">Market & Industry Insight</div>
-                </div>
-                <div class="skill">
-                  <svg width="220" height="220">
-                    <circle class="circle-bg" cx="130" cy="130" r="75.9" />
-                    <circle
-                      class="circle-progress-bd"
-                      cx="130"
-                      cy="130"
-                      r="75.9"
-                      style="--percent: 90"
-                    />
-                    <text x="130" y="137" text-anchor="middle" class="value">
-                      4.5
-                    </text>
-                  </svg>
-                  <div class="label">Collaboration & Internal Coordination</div>
-                </div>
-              </div>
+      <section id="status" class="status-section" aria-label="Portfolio status">
+        <div class="status-wrapper">
+          <article class="status-card">
+            <div class="status-icon">
+              <i class="fa-solid fa-code"></i>
             </div>
-            <div id="skills-se" class="portfolio-section">
-              <h2 class="skills-title">My Skills</h2>
-              <div class="skills-grid">
-                <div class="skill">
-                  <svg width="220" height="220">
-                    <defs>
-                      <linearGradient id="grad-se1" x1="1" y1="0" x2="0" y2="1">
-                        <stop offset="0%" stop-color="#00e0ff" />
-                        <stop offset="100%" stop-color="#7f00ff" />
-                      </linearGradient>
-                    </defs>
-                    <circle class="circle-bg" cx="130" cy="130" r="75.9" />
-                    <circle
-                      class="circle-progress"
-                      cx="130"
-                      cy="130"
-                      r="75.9"
-                      style="--percent: 84"
-                      stroke="url(#grad-se1)"
-                    />
-                    <text x="130" y="137" text-anchor="middle" class="value">
-                      4.2
-                    </text>
-                  </svg>
-                  <div class="label">Problem Solving</div>
-                </div>
-                <div class="skill">
-                  <svg width="220" height="220">
-                    <defs>
-                      <linearGradient id="grad-se2" x1="1" y1="0" x2="0" y2="1">
-                        <stop offset="0%" stop-color="#00e0ff" />
-                        <stop offset="100%" stop-color="#7f00ff" />
-                      </linearGradient>
-                    </defs>
-                    <circle class="circle-bg" cx="130" cy="130" r="75.9" />
-                    <circle
-                      class="circle-progress"
-                      cx="130"
-                      cy="130"
-                      r="75.9"
-                      style="--percent: 80"
-                      stroke="url(#grad-se2)"
-                    />
-                    <text x="130" y="137" text-anchor="middle" class="value">
-                      4.0
-                    </text>
-                  </svg>
-                  <div class="label">Adaptability</div>
-                </div>
-                <div class="skill">
-                  <svg width="220" height="220">
-                    <defs>
-                      <linearGradient id="grad-se3" x1="1" y1="0" x2="0" y2="1">
-                        <stop offset="0%" stop-color="#00e0ff" />
-                        <stop offset="100%" stop-color="#7f00ff" />
-                      </linearGradient>
-                    </defs>
-                    <circle class="circle-bg" cx="130" cy="130" r="75.9" />
-                    <circle
-                      class="circle-progress"
-                      cx="130"
-                      cy="130"
-                      r="75.9"
-                      style="--percent: 78"
-                      stroke="url(#grad-se3)"
-                    />
-                    <text x="130" y="137" text-anchor="middle" class="value">
-                      3.9
-                    </text>
-                  </svg>
-                  <div class="label">Web Development</div>
-                </div>
-                <div class="skill">
-                  <svg width="220" height="220">
-                    <defs>
-                      <linearGradient id="grad-se4" x1="1" y1="0" x2="0" y2="1">
-                        <stop offset="0%" stop-color="#00e0ff" />
-                        <stop offset="100%" stop-color="#7f00ff" />
-                      </linearGradient>
-                    </defs>
-                    <circle class="circle-bg" cx="130" cy="130" r="75.9" />
-                    <circle
-                      class="circle-progress"
-                      cx="130"
-                      cy="130"
-                      r="75.9"
-                      style="--percent: 75"
-                      stroke="url(#grad-se4)"
-                    />
-                    <text x="130" y="137" text-anchor="middle" class="value">
-                      3.8
-                    </text>
-                  </svg>
-                  <div class="label">API Integration</div>
-                </div>
-                <div class="skill">
-                  <svg width="220" height="220">
-                    <defs>
-                      <linearGradient id="grad-se5" x1="1" y1="0" x2="0" y2="1">
-                        <stop offset="0%" stop-color="#00e0ff" />
-                        <stop offset="100%" stop-color="#7f00ff" />
-                      </linearGradient>
-                    </defs>
-                    <circle class="circle-bg" cx="130" cy="130" r="75.9" />
-                    <circle
-                      class="circle-progress"
-                      cx="130"
-                      cy="130"
-                      r="75.9"
-                      style="--percent: 80"
-                      stroke="url(#grad-se5)"
-                    />
-                    <text x="130" y="137" text-anchor="middle" class="value">
-                      4.0
-                    </text>
-                  </svg>
-                  <div class="label">Team Collaboration</div>
-                </div>
-              </div>
+
+            <div class="status-info">
+              <h3>Total Projects</h3>
+              <p>Front-end dan Back-end</p>
             </div>
-          </div>
+
+            <div class="status-number">6</div>
+          </article>
+
+          <article class="status-card">
+            <div class="status-icon">
+              <i class="fa-solid fa-award"></i>
+            </div>
+
+            <div class="status-info">
+              <h3>Total Certificates</h3>
+              <p>Experience Support</p>
+            </div>
+
+            <div class="status-number">4</div>
+          </article>
+
+          <article class="status-card">
+            <div class="status-icon">
+              <i class="fa-solid fa-globe"></i>
+            </div>
+
+            <div class="status-info">
+              <h3>Years of Experience</h3>
+              <p>Continuous learning journey</p>
+            </div>
+
+            <div class="status-number">0</div>
+          </article>
         </div>
       </section>
 
@@ -392,17 +204,327 @@
                 </div>
                 <div class="info">
                   <strong>RevoU</strong>
-                  <p>2025</p>
+                  <p><i>June, 2025 - January, 2026</i></p>
+                  <h3>
+                    Trained as a full-stack software engineer, mastering web
+                    fundamentals, modern front-end and back-end frameworks ,
+                    their integration, database management, and Git-based
+                    collaboration
+                  </h3>
+                  <h4><strong>Final Project:</strong> RevoEdu</h4>
+                  <h5>
+                    I am developing an LMS application to help teachers manage
+                    courses, assignments, and quizzes, enabling students to
+                    easily enroll in courses and submit their assignments and
+                    quizzes. All within a unified, integrated platform
+                  </h5>
                 </div>
               </div>
               <!-- ipb -->
               <div class="study-item">
-                <div class="icon">
-                  <img src="assets/img/ipb.png" alt="logo IPB" />
+                <div class="icon icon-ipb">
+                  <img
+                    src="assets/img/ipb.png"
+                    alt="logo IPB"
+                    class="study-logo-ipb"
+                  />
                 </div>
                 <div class="info">
                   <strong>IPB University</strong>
-                  <p>2019</p>
+                  <p><i> August, 2019 - July, 2025</i></p>
+                  <h3>Bachelor's Degree of Engineering</h3>
+                  <h4>
+                    <strong>Bachelor's Thesis:</strong> Detection of Leaf
+                    Scorch, Leaf Blight, and Leaf Spot Diseases in Strawberry
+                    Plants (Fragaria sp.) Based on Deep Learning
+                  </h4>
+                  <h5>
+                    I developed a deep learning model to detect diseases in
+                    strawberry plant leaves using the YOLOv8 algorithm, and
+                    implemented it into a website with a user-friendly interface
+                  </h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="skills">
+        <div class="container">
+          <div id="skills-content-wrapper">
+            <div id="skills-bd" class="portfolio-section">
+              <h2 class="tools-title">
+                <span class="blue-text">Tools &</span>
+                <span class="white-text">Technologies</span>
+              </h2>
+              <p>My Technical Skills</p>
+
+              <div class="tools-grid">
+                <div class="tool-card">
+                  <img src="assets/img/vscode.png" alt="Visual Studio Code" />
+                  <div>
+                    <h3>Visual Studio Code</h3>
+                    <span>Code Editor</span>
+                  </div>
+                </div>
+
+                <div class="tool-card">
+                  <img src="assets/img/react.png" alt="React JS" />
+                  <div>
+                    <h3>React JS</h3>
+                    <span>Framework</span>
+                  </div>
+                </div>
+
+                <div class="tool-card">
+                  <img src="assets/img/nextjs.png" alt="Next JS" />
+                  <div>
+                    <h3>Next JS</h3>
+                    <span>Framework</span>
+                  </div>
+                </div>
+
+                <div class="tool-card">
+                  <img src="assets/img/tailwind.png" alt="Tailwind CSS" />
+                  <div>
+                    <h3>Tailwind CSS</h3>
+                    <span>Framework</span>
+                  </div>
+                </div>
+
+                <div class="tool-card">
+                  <img src="assets/img/html.png" alt="HTML" />
+                  <div>
+                    <h3>HTML</h3>
+                    <span>Markup Language</span>
+                  </div>
+                </div>
+
+                <div class="tool-card">
+                  <img src="assets/img/javascript.png" alt="JavaScript" />
+                  <div>
+                    <h3>Javascript</h3>
+                    <span>Language</span>
+                  </div>
+                </div>
+
+                <div class="tool-card">
+                  <img src="assets/img/node.png" alt="Node JS" />
+                  <div>
+                    <h3>Node JS</h3>
+                    <span>Javascript Runtime</span>
+                  </div>
+                </div>
+
+                <div class="tool-card">
+                  <img src="assets/img/typescript.png" alt="TypeScript" />
+                  <div>
+                    <h3>Typescript</h3>
+                    <span>Language</span>
+                  </div>
+                </div>
+
+                <div class="tool-card">
+                  <img src="assets/img/flask.png" alt="Flask" />
+                  <div>
+                    <h3>Flask</h3>
+                    <span>Framework</span>
+                  </div>
+                </div>
+
+                <div class="tool-card">
+                  <img src="assets/img/python.png" alt="Python" />
+                  <div>
+                    <h3>Python</h3>
+                    <span>Language</span>
+                  </div>
+                </div>
+
+                <div class="tool-card">
+                  <img src="assets/img/php.png" alt="PHP" />
+                  <div>
+                    <h3>PHP</h3>
+                    <span>Language</span>
+                  </div>
+                </div>
+
+                <div class="tool-card">
+                  <img src="assets/img/supa.png" alt="Supabase" />
+                  <div>
+                    <h3>Supabase</h3>
+                    <span>Cloud Server</span>
+                  </div>
+                </div>
+
+                <div class="tool-card">
+                  <img src="assets/img/opencv.png" alt="OpenCV" />
+                  <div>
+                    <h3>OpenCV</h3>
+                    <span>Computer Vision</span>
+                  </div>
+                </div>
+
+                <div class="tool-card">
+                  <img src="assets/img/neon.png" alt="Neonbase" />
+                  <div>
+                    <h3>Neonbase</h3>
+                    <span>Cloud Server</span>
+                  </div>
+                </div>
+
+                <div class="tool-card">
+                  <img src="assets/img/sql.png" alt="PostgreSQL" />
+                  <div>
+                    <h3>PostgreSQL</h3>
+                    <span>Database</span>
+                  </div>
+                </div>
+
+                <div class="tool-card">
+                  <img src="assets/img/css.png" alt="CSS" />
+                  <div>
+                    <h3>CSS</h3>
+                    <span>Framework</span>
+                  </div>
+                </div>
+
+                <div class="tool-card">
+                  <img src="assets/img/prisma.png" alt="Prisma ORM" />
+                  <div>
+                    <h3>Prisma ORM</h3>
+                    <span>Database</span>
+                  </div>
+                </div>
+
+                <div class="tool-card">
+                  <img src="assets/img/git.png" alt="GitHub" />
+                  <div>
+                    <h3>Github</h3>
+                    <span>Repository</span>
+                  </div>
+                </div>
+
+                <div class="tool-card">
+                  <img src="assets/img/yolo.png" alt="YOLO" />
+                  <div>
+                    <h3>YOLO</h3>
+                    <span>Computer Vision</span>
+                  </div>
+                </div>
+
+                <div class="tool-card">
+                  <img src="assets/img/docker.png" alt="Docker" />
+                  <div>
+                    <h3>Docker</h3>
+                    <span>Containerization</span>
+                  </div>
+                </div>
+
+                <div class="tool-card">
+                  <img src="assets/img/robo.png" alt="Roboflow" />
+                  <div>
+                    <h3>Roboflow</h3>
+                    <span>Computer Vision</span>
+                  </div>
+                </div>
+
+                <div class="tool-card">
+                  <img src="assets/img/vercel.png" alt="Vercel" />
+                  <div>
+                    <h3>Vercel</h3>
+                    <span>Cloud Server</span>
+                  </div>
+                </div>
+
+                <div class="tool-card">
+                  <img src="assets/img/railway.png" alt="Railway" />
+                  <div>
+                    <h3>Railway</h3>
+                    <span>Cloud Server</span>
+                  </div>
+                </div>
+
+                <div class="tool-card">
+                  <img src="assets/img/figma.png" alt="Figma" />
+                  <div>
+                    <h3>Figma</h3>
+                    <span>Design</span>
+                  </div>
+                </div>
+              </div>
+
+              <h2 class="skills-title1">
+                <span class="blue-text">Soft</span>
+                <span class="white-text">Skills</span>
+              </h2>
+              <div class="soft-skills-grid">
+                <div class="skill">
+                  <span class="skill-name">Communication</span>
+
+                  <div class="skill-bar">
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span></span>
+                  </div>
+                </div>
+
+                <div class="skill">
+                  <span class="skill-name">Problem Solving</span>
+
+                  <div class="skill-bar">
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+
+                <div class="skill">
+                  <span class="skill-name">Adaptability</span>
+
+                  <div class="skill-bar">
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+
+                <div class="skill">
+                  <span class="skill-name">Team Collaboration</span>
+
+                  <div class="skill-bar">
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -415,151 +537,431 @@
           <div id="experience-content-wrapper">
             <div id="experience-bd" class="portfolio-section">
               <div class="experience-heading">
-                <h2>My Experience</h2>
+                <h2>Portfolio Showcase</h2>
+                <p>
+                  Explore my journey throught experience, certificates, and
+                  projects. Each section represents a milestone in my continuous
+                  learning path.
+                </p>
               </div>
-              <h3>Organizational Experience</h3>
-              <div class="cards">
-                <div class="card">
-                  <img src="assets/img/bemf.jpg" alt="BEM Logo" />
-                  <h4>Faculty Student Executive Board (BEM)</h4>
-                  <p>Staff Business and Partnership Division (2020)</p>
+
+              <!-- TAB MENU -->
+              <div class="portfolio-tabs">
+                <button class="tab active" data-tab="experiences">
+                  <i class="fa-solid fa-briefcase"></i>
+                  <span>Experiences</span>
+                </button>
+
+                <button class="tab" data-tab="certificates">
+                  <i class="fa-solid fa-award"></i>
+                  <span>Certificates</span>
+                </button>
+
+                <button class="tab" data-tab="projects">
+                  <i class="fa-solid fa-code"></i>
+                  <span>Projects</span>
+                </button>
+              </div>
+
+              <!-- FILTER (ONLY FOR EXPERIENCE) -->
+              <div class="experience-filter">
+                <button class="filter active" data-filter="working">
+                  Working
+                </button>
+
+                <button class="filter" data-filter="organizational">
+                  Organizational
+                </button>
+
+                <button class="filter" data-filter="volunteer">
+                  Volunteer
+                </button>
+              </div>
+
+              <!-- EXPERIENCE CARDS -->
+              <div class="portfolio-grid tab-content active" id="experiences">
+                <div class="work-timeline working experience-entry">
+                  <div class="work-item">
+                    <div class="work-logo">
+                      <img src="assets/img/ty.jpeg" alt="Toko Yaya logo" />
+                    </div>
+
+                    <div class="work-body">
+                      <h3>
+                        Owner,
+                        <span class="work-company">Toko Yaya</span>
+                      </h3>
+                      <p class="work-period"><i>2025</i></p>
+                      <p class="work-description">
+                        Managed a digital product catalog of 40+ items (games,
+                        premium apps, and social media tools) and handled 5–20
+                        weekly transactions via Telegram. Expanded marketing
+                        reach by promoting products across 50+ Telegram
+                        communities using digital brochures and targeted
+                        copywriting. Strengthened customer trust and brand
+                        credibility through automated digital receipts and
+                        branded visual assets, while analyzing customer
+                        inquiries and purchasing behavior to optimize product
+                        positioning and improve conversion.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="work-item work-item-placeholder">
+                    <div class="work-logo work-logo-empty"></div>
+                    <div class="work-body-placeholder">
+                      <span class="work-placeholder-label">Present</span>
+                    </div>
+                  </div>
                 </div>
-                <div class="card">
-                  <img src="assets/img/hima.jpg" alt="HIMATETA Logo" />
-                  <h4>
-                    Mechanical and Biosystems Engineering Student Association
-                    (Himateta)
-                  </h4>
-                  <p>Staff Inventory and Entrepreneurship Division (2021)</p>
+
+                <div class="org-timeline organizational experience-entry">
+                  <!-- Item 1: HIMATETA IPB — RIGHT -->
+                  <div class="org-item org-item--right">
+                    <div class="org-dot"></div>
+                    <div class="org-card">
+                      <h3 class="org-name">HIMATETA IPB</h3>
+                      <p class="org-role">
+                        Staff Inventory and Entrepreneurship
+                      </p>
+                      <p class="org-year">
+                        <i>November, 2021 – December, 2022</i>
+                      </p>
+                      <div class="org-img-wrap">
+                        <img src="assets/img/hima.jpg" alt="HIMATETA IPB" />
+                      </div>
+                      <p class="org-desc">
+                        Managed product sales operations by optimizing marketing
+                        strategies and multi-channel distribution to improve
+                        market reach and sales efficiency. Maintained accurate
+                        financial records by tracking revenue and expenses using
+                        standardized reporting to ensure transparency. Also
+                        coordinated with student associations across departments
+                        to conduct benchmarking, share best practices, and
+                        strengthen collaboration to improve organizational
+                        programs and effectiveness.
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Item 2: Faculty Student Executive Board IPB — LEFT -->
+                  <div class="org-item org-item--left">
+                    <div class="org-dot"></div>
+                    <div class="org-card">
+                      <h3 class="org-name">
+                        Faculty Student Executive Board IPB
+                      </h3>
+                      <p class="org-role">Staff Business and Partnership</p>
+                      <p class="org-year">
+                        <i>December, 2020 – November, 2021</i>
+                      </p>
+                      <div class="org-img-wrap">
+                        <img
+                          src="assets/img/bemf.jpg"
+                          alt="Faculty Student Executive Board IPB"
+                        />
+                      </div>
+                      <p class="org-desc">
+                        Developed and executed marketing and sales strategies
+                        through direct selling and social media promotion to
+                        increase product visibility and conversions. Designed
+                        Instagram feed content and visual layouts, including
+                        color palette selection, product alignment, and engaging
+                        captions to strengthen brand identity. Created
+                        promotional banners and pricing campaigns to support
+                        marketing initiatives, while maintaining weekly meeting
+                        documentation using standardized formats to ensure
+                        organized records and effective communication with the
+                        division leadership.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="org-timeline volunteer experience-entry">
+                  <!-- Item 1: Redsbim — RIGHT -->
+                  <div class="org-item org-item--right">
+                    <div class="org-dot"></div>
+                    <div class="org-card">
+                      <h3 class="org-name">
+                        Business, Digital Marketing, and Stocks Webinars &
+                        Training
+                      </h3>
+                      <p class="org-role">Secretary</p>
+                      <p class="org-year"><i>March 2021 – August 2021</i></p>
+                      <div class="org-img-wrap">
+                        <img
+                          src="assets/img/redsbim.jpg"
+                          alt="Business, Digital Marketing, and Stocks Webinars and Training"
+                        />
+                      </div>
+                      <p class="org-desc">
+                        Contacted and confirmed speakers for stock investment
+                        webinars through personal networks by clearly
+                        communicating event objectives and speaker benefits.
+                        Recorded meeting and webinar minutes to maintain
+                        organized documentation for effective follow-up and
+                        decision-making, and acted as a liaison between
+                        divisions to coordinate requests, distribute tasks, and
+                        ensure smooth communication and timely execution of
+                        responsibilities.
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Item 2: mpkmb — LEFT -->
+                  <div class="org-item org-item--left">
+                    <div class="org-dot"></div>
+                    <div class="org-card">
+                      <h3 class="org-name">Campus Orientation Committee</h3>
+                      <p class="org-role">
+                        Staff Design Decoration Branding Division
+                      </p>
+                      <p class="org-year"><i>April 2020 – September 2020</i></p>
+                      <div class="org-img-wrap">
+                        <img
+                          src="assets/img/mpkmb.jpg"
+                          alt="Campus Orientation Committee"
+                        />
+                      </div>
+                      <p class="org-desc">
+                        Designed and arranged the stage layout and decorations
+                        for six months to ensure alignment with the event theme
+                        and create a strong visual experience. Collaborated in
+                        the design and ideation of LINE stickers to support
+                        consistent event branding, while coordinating with the
+                        design team to ensure the final visuals met quality
+                        standards and branding objectives.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <h3>Volunteering</h3>
-              <div class="cards">
-                <div class="card">
-                  <img src="assets/img/mpkmb.jpg" alt="MPKMB 57" />
-                  <h4>Campus Orientation Committee (MPKMB 57)</h4>
-                  <p>Staff Design Decoration Branding (2020)</p>
-                </div>
-                <div class="card">
-                  <img src="assets/img/mmd.jpg" alt="TechnoF 57" />
-                  <h4>Faculty Orientation Committee (TechnoF 57)</h4>
-                  <p>Staff Multi Media and Decoration (2021)</p>
-                </div>
-                <div class="card">
-                  <img src="assets/img/redsbim.jpg" alt="Redsbim" />
-                  <h4>Redsbim (Webinars and Training)</h4>
-                  <p>Supervisor, Secretary (2021)</p>
-                </div>
-              </div>
-              <h3>Independent Business</h3>
-              <div class="cards">
-                <div class="card">
-                  <img
-                    src="assets/img/bilathrift.jpg"
-                    alt="Online thrift shop logo"
-                  />
-                  <h4>Online thrift shop (@bilathrift.id)</h4>
-                  <p>Owner (2020)</p>
-                </div>
-                <div class="card">
-                  <img
-                    src="assets/img/tokoyaya.jpg"
-                    alt="Digital product reseller logo"
-                  />
-                  <h4>Digital product reseller (@toko_yaya)</h4>
-                  <p>Owner (2025)</p>
-                </div>
-              </div>
-            </div>
-            <div id="experience-se" class="portfolio-section">
-              <div class="experience-heading">
-                <h2>My Experience</h2>
-              </div>
-              <h3>Projects Experience</h3>
-              <div class="cards">
-                <div class="card-se">
-                  <div class="card-img-grid">
+
+              <!-- CERTIFICATES -->
+              <div class="portfolio-grid tab-content" id="certificates">
+                <a
+                  class="certificate-card"
+                  href="https://drive.google.com/file/d/1PPAcnOQfumLQjqoNGJ5LbMSlX8-sJOwf/view?usp=drive_link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div class="cert-image-wrap">
+                    <img src="assets/img/srevou.jpg" alt="Sertifikat revou" />
+                    <div class="cert-overlay">
+                      <span class="cert-preview-pill">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <span>Preview</span>
+                      </span>
+                    </div>
+                  </div>
+                  <h3 class="cert-title">
+                    Certificate Full-Stack Software Engineering
+                  </h3>
+                  <p class="cert-year"><i>January 2026</i></p>
+                </a>
+
+                <a
+                  class="certificate-card"
+                  href="https://drive.google.com/file/d/1PenHHCZyiJvOcgss-Bs5EkL3kNR5Kfes/view?usp=drive_link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div class="cert-image-wrap">
                     <img
-                      src="assets/img/stroberi1.jpg"
-                      alt="Strawberry Leaf Disease 1"
+                      src="assets/img/shimateta.jpg"
+                      alt="Sertifikat himateta"
                     />
+                    <div class="cert-overlay">
+                      <span class="cert-preview-pill">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <span>Preview</span>
+                      </span>
+                    </div>
+                  </div>
+                  <h3 class="cert-title">Certificate of Appreciation</h3>
+                  <p class="cert-year"><i>May 2023</i></p>
+                </a>
+
+                <a
+                  class="certificate-card"
+                  href="https://drive.google.com/file/d/1Pa91bHnZpFT0AeWtqYPuQOoMpJxtgEMu/view?usp=drive_link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div class="cert-image-wrap">
+                    <img src="assets/img/sbemf.png" alt="Sertifikat bemf" />
+                    <div class="cert-overlay">
+                      <span class="cert-preview-pill">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <span>Preview</span>
+                      </span>
+                    </div>
+                  </div>
+                  <h3 class="cert-title">Certificate Karsa Cipta</h3>
+                  <p class="cert-year"><i>January 2022</i></p>
+                </a>
+
+                <a
+                  class="certificate-card"
+                  href="https://drive.google.com/file/d/1PSUmzeXckyDOx3oOchsuMKYe4PfzeRYN/view?usp=drive_link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div class="cert-image-wrap">
+                    <img src="assets/img/smpkmb.jpg" alt="Sertifikat mpkmb57" />
+                    <div class="cert-overlay">
+                      <span class="cert-preview-pill">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <span>Preview</span>
+                      </span>
+                    </div>
+                  </div>
+                  <h3 class="cert-title">Certificate Committee</h3>
+                  <p class="cert-year"><i>September 2020</i></p>
+                </a>
+              </div>
+
+              <!-- PROJECTS -->
+              <div class="portfolio-grid tab-content" id="projects">
+                <a class="certificate-card" href="projects/lms.html">
+                  <div class="cert-image-wrap">
+                    <img src="assets/img/revoedu.png" alt="RevoEdu preview" />
+                    <div class="cert-overlay">
+                      <span class="cert-preview-pill">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <span>See More</span>
+                      </span>
+                    </div>
+                  </div>
+                  <h3 class="cert-title">RevoEdu</h3>
+                  <p class="cert-year"><i>January 2026</i></p>
+                  <p class="proj-desc">
+                    RevoEdu is a comprehensive Learning Management System (LMS)
+                    designed to facilitate digital education for both students
+                    and lecturers. It serves as a centralized platform for
+                    course management, content delivery, and assignment
+                    tracking, bridging the gap between instructional material
+                    and student engagement in a virtual classroom environment.
+                  </p>
+                </a>
+
+                <a class="certificate-card" href="projects/ecommerce.html">
+                  <div class="cert-image-wrap">
+                    <img src="assets/img/revoshop.png" alt="RevoShop preview" />
+                    <div class="cert-overlay">
+                      <span class="cert-preview-pill">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <span>See More</span>
+                      </span>
+                    </div>
+                  </div>
+                  <h3 class="cert-title">RevoShop</h3>
+                  <p class="cert-year"><i>November 2025</i></p>
+                  <p class="proj-desc">
+                    RevoShop is a modern e-commerce application designed to
+                    provide a seamless shopping experience for digital products.
+                    Built to demonstrate proficiency in contemporary web
+                    development, it serves as a functional store prototype where
+                    users can browse, filter, and manage products through a
+                    clean, performant interface.
+                  </p>
+                </a>
+
+                <a class="certificate-card" href="projects/revobank.html">
+                  <div class="cert-image-wrap">
+                    <img src="assets/img/revobank.png" alt="RevoBank preview" />
+                    <div class="cert-overlay">
+                      <span class="cert-preview-pill">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <span>See More</span>
+                      </span>
+                    </div>
+                  </div>
+                  <h3 class="cert-title">RevoBank</h3>
+                  <p class="cert-year"><i>December 2025 - January 2026</i></p>
+                  <p class="proj-desc">
+                    RevoBank is a robust backend system designed to power
+                    digital banking operations. It provides a secure and
+                    scalable infrastructure for managing user identities,
+                    multiple bank accounts, and financial transactions. The
+                    project serves as the core engine for a banking ecosystem,
+                    ensuring data integrity and security for sensitive financial
+                    information.
+                  </p>
+                </a>
+
+                <a class="certificate-card" href="projects/game.html">
+                  <div class="cert-image-wrap">
                     <img
-                      src="assets/img/stroberi2.png"
-                      alt="Strawberry Leaf Disease 2"
+                      src="assets/img/revofun.png"
+                      alt="Game Project preview"
                     />
+                    <div class="cert-overlay">
+                      <span class="cert-preview-pill">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <span>See More</span>
+                      </span>
+                    </div>
+                  </div>
+                  <h3 class="cert-title">RevoFun</h3>
+                  <p class="cert-year"><i>September 2025</i></p>
+                  <p class="proj-desc">
+                    RevoFun is an interactive web-based gaming platform
+                    featuring a collection of classic arcade-style mini-games.
+                    Designed to demonstrate front-end development skills and
+                    game logic implementation, the project provides a
+                    centralized hub where users can engage in multiple distinct
+                    gaming experiences directly within a web browser.
+                  </p>
+                </a>
+                <a class="certificate-card" href="projects/porto.html">
+                  <div class="cert-image-wrap">
+                    <img src="assets/img/porto.png" alt="Portfolio preview" />
+                    <div class="cert-overlay">
+                      <span class="cert-preview-pill">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <span>See More</span>
+                      </span>
+                    </div>
+                  </div>
+                  <h3 class="cert-title">PortFolio</h3>
+                  <p class="cert-year"><i>July 2025 - August 2025</i></p>
+                  <p class="proj-desc">
+                    The project is a personal portfolio website designed to
+                    showcase professional skills and experiences in business and
+                    technology. It serves as a digital profile for a fresh
+                    graduate in Mechanical and Biosystems Engineering who is
+                    transitioning into business development and digital product
+                    development. The site highlights the creator's background,
+                    skills, and organizational achievements.
+                  </p>
+                </a>
+                <a class="certificate-card" href="projects/strawberry.html">
+                  <div class="cert-image-wrap">
                     <img
-                      src="assets/img/stroberi3.jpg"
-                      alt="Strawberry Leaf Disease 3"
+                      src="assets/img/stroberi.png"
+                      alt="peduli stroberi preview"
                     />
-                    <img
-                      src="assets/img/stroberi4.jpg"
-                      alt="Strawberry Leaf Disease 4"
-                    />
+                    <div class="cert-overlay">
+                      <span class="cert-preview-pill">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <span>See More</span>
+                      </span>
+                    </div>
                   </div>
-                  <h4>Peduli Stroberi</h4>
-                  <h5>
-                    Web application using machine learning to detect strawberry
-                    leaf diseases
-                  </h5>
-                  <p>(February 2023 -July 2024)</p>
-                </div>
-                <div class="card-se">
-                  <div class="card-img-grid">
-                    <img src="assets/img/port1.png" alt="Portfolio 1" />
-                    <img src="assets/img/port2.png" alt="Portfolio 2" />
-                    <img src="assets/img/port3.png" alt="Portfolio 3" />
-                    <img src="assets/img/port4.png" alt="Portfolio 4" />
-                  </div>
-                  <h4>Portfolio</h4>
-                  <h5>Responsive Web Pages</h5>
-                  <p>(July 2025 - August 2025)</p>
-                </div>
-                <div class="card-se">
-                  <div class="card-img-grid">
-                    <img src="assets/img/game1.png" alt="RevoFun 1" />
-                    <img src="assets/img/game2.png" alt="RevoFun 2" />
-                    <img src="assets/img/game3.png" alt="RevoFun 3" />
-                    <img src="assets/img/game4.png" alt="RevoFun 4" />
-                  </div>
-                  <h4>RevoFun</h4>
-                  <h5>Interactive Website</h5>
-                  <p>(September 2025)</p>
-                </div>
-                <div class="card-se">
-                  <div class="card-img-grid">
-                    <img src="assets/img/shop1.png" alt="RevoShop 1" />
-                    <img src="assets/img/shop2.png" alt="RevoShop 2" />
-                    <img src="assets/img/shop3.png" alt="RevoShop 3" />
-                    <img src="assets/img/shop4.png" alt="RevoShop 4" />
-                  </div>
-                  <h4>RevoShop</h4>
-                  <h5>Front-end Application</h5>
-                  <p>(October 2025 - November 2025)</p>
-                </div>
-                <div class="card-se">
-                  <div class="card-img-grid">
-                    <img src="assets/img/bank1.png" alt="RevoBank 1" />
-                    <img src="assets/img/bank2.png" alt="RevoBank 2" />
-                    <img src="assets/img/bank3.png" alt="RevoBank 3" />
-                    <img src="assets/img/bank4.png" alt="RevoBank 4" />
-                  </div>
-                  <h4>RevoBank-API</h4>
-                  <h5>Back-end Development</h5>
-                  <p>(December 2025 - January 2026)</p>
-                </div>
-                <div class="card-se">
-                  <div class="card-img-grid">
-                    <img src="assets/img/edu1.png" alt="RevoEdu 1" />
-                    <img src="assets/img/edu2.png" alt="RevoEdu 2" />
-                    <img src="assets/img/edu3.png" alt="RevoEdu 3" />
-                    <img src="assets/img/edu4.png" alt="RevoEdu 4" />
-                  </div>
-                  <h4>RevoEdu</h4>
-                  <h5>
-                    Comprehensive Real-world Applications for Coding Knowledge
-                  </h5>
-                  <p>(January 2026)</p>
-                </div>
+                  <h3 class="cert-title">Peduli Stroberi</h3>
+                  <p class="cert-year"><i>February 2023 - July 2024</i></p>
+                  <p class="proj-desc">
+                    This project is a Python-based decision support system
+                    designed to assist farmers in detecting strawberry leaf
+                    diseases. By leveraging YOLOv8 computer vision, it addresses
+                    agricultural economic threats by providing a technological
+                    solution to identify infections from uploaded photos,
+                    helping minimize crop yield losses through early
+                    intervention.
+                  </p>
+                </a>
               </div>
             </div>
           </div>
@@ -569,13 +971,12 @@
       <section class="download-section">
         <div class="container">
           <h2>Interested In My Experience?</h2>
-          <p>Download My CV To Know More About Me</p>
           <div class="cv-btn-group">
-            <a href="cv-bd.pdf" class="btn-cv" download
-              >Download CV Business Development</a
-            >
-            <a href="cv-se.pdf" class="btn-cv" download
-              >Download CV Software Engineer</a
+            <a
+              href="https://docs.google.com/document/d/1vQmc5B1rz7LEpmpSkbZcPemeWume-slI/edit?usp=sharing&ouid=102538993394413215208&rtpof=true&sd=true"
+              class="btn-cv"
+              download
+              >Download My CV To Know More About Me</a
             >
           </div>
         </div>
@@ -583,107 +984,211 @@
 
       <section id="contact" class="contact">
         <div class="container">
-          <div style="width: 100%">
-            <h1>Contact</h1>
-            <div class="description">
-              <p>
-                Interested in my CV or portfolio? Or perhaps have questions?
-                Contact me, and I'll be happy to assist you.
-              </p>
+          <!-- Title -->
+          <div class="contact-header">
+            <div class="badge">
+              <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+              <span>Get in Touch</span>
             </div>
+
+            <h1>Let's Connect</h1>
+
+            <p>
+              Ready to bring ideas to life? If you're interested in my CV,
+              portfolio, or collaboration, feel free to reach out.
+            </p>
           </div>
 
-          <div class="column">
-            <h3>Info</h3>
-            <div class="contact-info">
+          <div class="contact-grid">
+            <!-- LEFT SIDE -->
+            <div class="contact-left">
+              <h3>Let's Work Together</h3>
+
               <p>
-                <strong>
-                  <img
-                    src="https://img.icons8.com/fluency-systems-filled/48/phone.png"
-                    alt="phone"
-                    class="icons"
+                I'm always excited to collaborate on new projects and ideas.
+                Whether you have a question or just want to say hello, feel free
+                to contact me.
+              </p>
+
+              <div class="contact-card">
+                <div class="card">
+                  <span class="card-icon" aria-hidden="true">
+                    <i class="fa-regular fa-envelope"></i>
+                  </span>
+                  <div class="card-copy">
+                    <h4>Email Me</h4>
+                    <p>nablahnur54@gmail.com</p>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <span class="card-icon" aria-hidden="true">
+                    <i class="fa-solid fa-phone"></i>
+                  </span>
+                  <div class="card-copy">
+                    <h4>Call Me</h4>
+                    <p>+62 859 3043 6990</p>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <span class="card-icon" aria-hidden="true">
+                    <i class="fa-solid fa-location-dot"></i>
+                  </span>
+                  <div class="card-copy">
+                    <h4>Location</h4>
+                    <p>Dramaga, Kabupaten Bogor, Jawa Barat</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- SOCIAL -->
+              <div class="social">
+                <a href="https://wa.me/+6281211886521" aria-label="WhatsApp">
+                  <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                </a>
+
+                <a
+                  href="https://www.instagram.com/abilanr"
+                  aria-label="Instagram"
+                >
+                  <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                </a>
+
+                <a href="https://t.me/awbila" aria-label="Telegram">
+                  <i class="fa-brands fa-telegram" aria-hidden="true"></i>
+                </a>
+
+                <a
+                  href="https://www.linkedin.com/in/abilanr/"
+                  aria-label="LinkedIn"
+                >
+                  <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                </a>
+
+                <a href="https://github.com/awxbila" aria-label="GitHub">
+                  <i class="fa-brands fa-github" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- RIGHT SIDE FORM -->
+            <div class="contact-right">
+              <h3>Send me a message</h3>
+              <p class="contact-form-copy">
+                Fill out the form below and I'll get back to you as soon as
+                possible.
+              </p>
+
+              <form
+                id="contact-form"
+                class="contact-form"
+                action="https://formsubmit.co/ajax/nablahnur54@gmail.com"
+                method="POST"
+              >
+                <input type="hidden" name="_captcha" value="false" />
+                <input
+                  type="hidden"
+                  name="_subject"
+                  value="New portfolio message from awxbila"
+                />
+                <input
+                  type="text"
+                  name="_honey"
+                  class="form-honeypot"
+                  tabindex="-1"
+                  autocomplete="off"
+                />
+
+                <div class="form-row">
+                  <div class="field-group">
+                    <label class="field-label" for="contact-name">
+                      <i class="fa-regular fa-user"></i>
+                      <span>Full Name</span>
+                    </label>
+                    <input
+                      id="contact-name"
+                      type="text"
+                      name="name"
+                      placeholder="Full Name"
+                      required
+                    />
+                  </div>
+
+                  <div class="field-group">
+                    <label class="field-label" for="contact-email">
+                      <i class="fa-regular fa-envelope"></i>
+                      <span>Email Address</span>
+                    </label>
+                    <input
+                      id="contact-email"
+                      type="email"
+                      name="email"
+                      placeholder="Email Address"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="field-group">
+                  <label class="field-label" for="contact-subject">
+                    <i class="fa-solid fa-tag"></i>
+                    <span>Subject</span>
+                  </label>
+                  <input
+                    id="contact-subject"
+                    type="text"
+                    name="subject"
+                    placeholder="What is this about?"
                   />
-                  +62 859 3043 6990
-                </strong>
-              </p>
+                </div>
 
-              <p>
-                <a href="mailto:nablahnur54@gmail.com">nablahnur54@gmail.com</a>
-              </p>
-              <p>Dramaga<br />Kabupaten Bogor<br />Jawa Barat<br />16680</p>
-            </div>
-          </div>
+                <div class="field-group">
+                  <label class="field-label" for="contact-message">
+                    <i class="fa-regular fa-message"></i>
+                    <span>Message</span>
+                  </label>
+                  <textarea
+                    id="contact-message"
+                    name="message"
+                    placeholder="Tell me about your project..."
+                    rows="5"
+                    required
+                  ></textarea>
+                </div>
 
-          <div class="column">
-            <h3>Say hello</h3>
-            <form action="#" method="POST">
-              <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" name="name" placeholder="Name" required />
-              </div>
+                <button type="submit" class="contact-submit">
+                  <i class="fa-solid fa-paper-plane"></i>
+                  <span>Send Message</span>
+                </button>
 
-              <div class="form-group">
-                <label for="phone">Telephone</label>
-                <input type="text" name="phone" placeholder="Telephone" />
-              </div>
+                <p
+                  id="contact-form-status"
+                  class="form-status form-status--success"
+                  role="status"
+                  aria-live="polite"
+                  hidden
+                >
+                  <i class="fa-solid fa-circle-check"></i>
+                  <span>
+                    Thank you! Your message has been sent successfully. I'll get
+                    back to you soon!
+                  </span>
+                </p>
 
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" name="email" placeholder="Email" required />
-              </div>
-
-              <div class="form-group">
-                <label for="comment">Comment</label>
-                <textarea
-                  name="comment"
-                  placeholder="Comment"
-                  rows="4"
-                  required
-                ></textarea>
-              </div>
-
-              <input type="submit" value="Submit" />
-            </form>
-          </div>
-
-          <div class="column">
-            <h3>Keep connected</h3>
-            <div class="social">
-              <a href="https://wa.me//+6281211886521">
-                <img
-                  src="https://img.icons8.com/ios-filled/50/whatsapp--v1.png"
-                  alt="whatsapp--v1"
-                  class="sosmed"
-                />WhatsApp
-              </a>
-              <a href="https://www.instagram.com/abilanr">
-                <img
-                  src="https://img.icons8.com/ios-glyphs/30/instagram-new.png"
-                  alt="instagram-new"
-                  class="sosmed"
-                />Instagram
-              </a>
-              <a href="https://t.me/awbila">
-                <img
-                  src="https://img.icons8.com/ios-filled/50/telegram.png"
-                  alt="telegram"
-                  class="sosmed"
-                />Telegram
-              </a>
-              <a href="https://www.linkedin.com/in/abilanr/">
-                <img
-                  src="https://img.icons8.com/ios-filled/50/linkedin.png"
-                  alt="linkedin"
-                  class="sosmed"
-                />LinkedIn
-              </a>
-              <a href="https://github.com/awxbila">
-                <img
-                  src="https://img.icons8.com/ios-glyphs/30/github.png"
-                  alt="github"
-                  class="sosmed"
-                />Github
-              </a>
+                <p
+                  id="contact-form-error"
+                  class="form-status form-status--error"
+                  role="alert"
+                  hidden
+                >
+                  <i class="fa-solid fa-circle-exclamation"></i>
+                  <span>
+                    Sorry, your message couldn't be sent right now. Please try
+                    again in a moment.
+                  </span>
+                </p>
+              </form>
             </div>
           </div>
         </div>
@@ -692,7 +1197,7 @@
 
     <footer>
       <div class="container">
-        <p>© 2025 Nabilah Nur Hazimah. All rights reserved.</p>
+        <p>© 2026 Nabilah Nur Hazimah. All rights reserved.</p>
       </div>
     </footer>
 
