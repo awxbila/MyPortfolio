@@ -3,6 +3,23 @@
   const overlay = document.getElementById("intro-overlay");
   if (!overlay) return;
 
+  const isReloadNavigation = (() => {
+    try {
+      const navEntries = performance.getEntriesByType("navigation");
+      if (Array.isArray(navEntries) && navEntries.length > 0) {
+        return navEntries[0].type === "reload";
+      }
+    } catch {
+      // fallback handled below
+    }
+
+    try {
+      return performance.navigation.type === 1;
+    } catch {
+      return false;
+    }
+  })();
+
   const jumpToHashTarget = () => {
     const hash = window.location.hash;
     if (!hash || hash === "#") return;
@@ -60,7 +77,23 @@
     }
   })();
 
-  if (cameFromProjectPage || skipIntroOnce) {
+  if (isReloadNavigation) {
+    if ("scrollRestoration" in history) {
+      history.scrollRestoration = "manual";
+    }
+
+    if (window.location.hash) {
+      history.replaceState(
+        null,
+        "",
+        `${window.location.pathname}${window.location.search}`,
+      );
+    }
+
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  }
+
+  if (!isReloadNavigation && (cameFromProjectPage || skipIntroOnce)) {
     document.body.style.overflow = "hidden";
 
     // Keep overlay visible until hash landing is stable to avoid profile flash.
@@ -81,6 +114,13 @@
   document.body.style.overflow = "hidden";
   // shorter intro timing to keep the opening snappy
   setTimeout(() => {
+    if (isReloadNavigation) {
+      window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+      if ("scrollRestoration" in history) {
+        history.scrollRestoration = "auto";
+      }
+    }
+
     overlay.remove();
     document.body.style.overflow = "";
     window.dispatchEvent(new Event("intro:finished"));

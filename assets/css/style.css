@@ -384,7 +384,7 @@ footer {
   height: 0.2rem;
   bottom: 0;
   left: 0;
-  background-color: rgb(84, 94, 143);
+  background-color: rgb(132, 89, 212);
   transition: width 0.3s ease;
 }
 .menu a:hover {
@@ -417,7 +417,7 @@ footer {
 .hamburger div {
   width: 25px;
   height: 3px;
-  background-color: #c7c8ff;
+  background-color: #d6daee;
   transition: all 0.3s ease;
 }
 /* Mobile Menu Hidden by Default */
@@ -428,7 +428,7 @@ footer {
   top: 100%;
   left: 0;
   right: 0;
-  background-color: #607788c0;
+  background-color: #d6daee;
   align-items: center;
   gap: 1.5rem;
   padding: 0;
@@ -457,7 +457,7 @@ footer {
   transition: color 0.3s ease;
 }
 .mobile-menu li a:hover {
-  color: #3d5270;
+  color: #583e9e;
 }
 /* ========== SMOOTH BODY MOVEMENT ========== */
 body {
@@ -1023,7 +1023,7 @@ body {
 
 /* helper classes for colored words in headings */
 .blue-text {
-  color: #365baa;
+  color: #554eb1;
 }
 .white-text {
   color: #ffffff;
@@ -1691,8 +1691,8 @@ body {
 }
 
 .filter.active {
-  background: #1f4eb3;
-  box-shadow: 0 0 14px rgba(42, 105, 240, 0.42);
+  background: #49319e;
+  box-shadow: 0 0 14px rgba(95, 42, 240, 0.42);
 }
 
 .filter:hover:not(.active) {
@@ -1805,7 +1805,7 @@ body {
 .work-company {
   display: inline-block;
   margin-left: 0.45rem;
-  color: #8db8ff;
+  color: #949fff;
 }
 
 .work-period {
@@ -2724,7 +2724,7 @@ footer {
     top: 100%;
     left: 0;
     right: 0;
-    background-color: rgb(111, 115, 122);
+    background-color: rgba(197, 191, 219, 0.644);
     padding: 0;
     list-style: none;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
@@ -3083,9 +3083,9 @@ footer {
   }
 
   .icon-ipb {
-    width: 44px;
-    height: 44px;
-    flex: 0 0 44px;
+    width: var(--study-icon-size);
+    height: var(--study-icon-size);
+    flex: 0 0 var(--study-icon-size);
   }
 
   .status-section {
@@ -3155,7 +3155,7 @@ footer {
   }
 
   .work-body h3 {
-    font-size: 18px;
+    font-size: 14px;
     white-space: normal;
   }
 
@@ -3205,9 +3205,9 @@ footer {
 
   .org-name {
     margin-top: 0;
-    font-size: 13px;
+    font-size: 11px;
     line-height: 1.3;
-    text-align: left;
+    text-align: center;
     white-space: normal;
     overflow-wrap: anywhere;
     word-break: normal;
@@ -3215,14 +3215,15 @@ footer {
   }
 
   .org-role {
-    font-size: 11.5px;
+    font-size: 10px;
     line-height: 1.35;
-    text-align: left;
+    text-align: center;
     white-space: normal;
   }
 
   .org-year {
     font-size: 11px;
+    text-align: center;
   }
 
   .org-desc {
